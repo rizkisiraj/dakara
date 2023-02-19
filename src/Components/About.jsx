@@ -16,7 +16,7 @@ function About() {
                         yang lebih baik, dan dapat menghibur
                         untuk semua kalangan</p>
                 <div>
-                    <button className='w-auto h-auto py-1.5 px-5 mt-8 bg-white/20 hover:bg-slate-500 rounded-xl border-white border-2 font-semibold text-md shadow-blue-800 shadow-md'>
+                    <button className='w-auto h-auto py-1.5 px-4 mt-8 bg-white/20 hover:bg-slate-500 rounded-xl border-white border-2 font-semibold text-md shadow-blue-800 shadow-md'>
                         <span style={{textShadow: '0px 2px 2px rgb(47 79 79) '}}>Selengkapnya</span>
                     </button>
                 </div>

@@ -1,34 +1,68 @@
-import { useState } from "react"
-import logo from '../assets/logo.png';
-import hamburger from '../assets/hamburger.png';
-import close from '../assets/icon-close.png';
 
-function Navbar () {
-    const [open, setopen] = useState(false)
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import logo from '../assets/logo.png';
+
+
+function Navbar1() {
     const menus = [
-        { name: "INTRO" },
-        { name: "HOME" },
-        { name: "TALENT" },
-        { name: "ABOUT" },
-        { name: "NEWS" },
-        { name: "MERCH" },
-    ]
-    return (
-        <nav className="flex items-center z-50 sticky top-0 py-2 max-md:pt-4 bg-white">
-            <img src={open ? close : hamburger} alt="navigation" className="md:hidden  fixed right-5 cursor-pointer z-20 w-9 h-9" onClick={() => setopen(!open)} />
-            <img src={logo} alt="logos" className="w-9 h-9 ml-12 max-md:ml-5" />
-            <p className="ml-2 text-lg z-0"><strong> Dakara Live </strong></p>
-            <ul className={`bg-white/90  md:static pr-24 fixed duration-300 ease-linear top-0 md:h-auto h-screen z-10 ${!open ? 'right-[-100%] ' : 'right-0'} ml-auto max-md:pt-16 max-md:pr-25`}>
-                {
-                    menus.map((menu) => (
-                        <li className="md:inline-block  md:ml-6 ml-5 md:my-0 border-b-2 border-transparent hover:border-black duration-300">
-                            <a className="text-black cursor-pointer font-Barlow font-semibold text-sm inline-block md:py-2 py-2 lg:text-md max-md:text-sm">
-                                <span className="font-bold"></span>  {menu.name}</a>
-                        </li>
+                 { name: "INTRO" },
+                 { name: "HOME" },
+                 { name: "TALENT" },
+                 { name: "ABOUT" },
+                 { name: "NEWS" },
+                 { name: "MERCH" },
+             ]
+    const [navbar, setNavbar] = useState(false);
+    const [color, setColor] = useState('light');
+    const changeBg = () => {
+        if (window.scrollY >= 90){
+            setNavbar(true);
+            setColor ('light') ;
+        }else{
+            setNavbar(false);
+            setColor ('dark');
+        } 
+    }
+
+    window.addEventListener('scroll', changeBg); 
+  return (
+    <>
+      {['lg'].map((expand) => (
+        <Navbar key={expand} bg="" variant={color} expand={expand} className={`mb-3 z-10 text-white ${navbar ? 'bg-white text-black' : 'bg-transparent'}`} sticky='top'>
+          <Container fluid>
+            <Navbar.Brand href="" className=' text-md font-bold ml-5'><img src={logo} alt="" width={50} className='inline-block' /><span className='ml-2'>Dakara ID</span></Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Dakara ID
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body className='text-white'>
+
+                <Nav className="justify-content-end flex-grow-1 pe-5 font-semibold">
+                    {menus.map((menu) => (
+                    <Nav.Link className='hover:border-b-2 '>{menu.name}</Nav.Link>
                     ))
-                }
-            </ul>
-        </nav>
-    )
+                    }
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+    </>
+  );
 }
-export default Navbar
+
+export default Navbar1;

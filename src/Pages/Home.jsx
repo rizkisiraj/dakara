@@ -3,7 +3,6 @@ import Event from '../Components/Event'
 import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Talent from '../Components/Talent'
-import Background from '../assets/bg-home.png'
 import Footer from '../Components/Footer'
 
 function Home(){

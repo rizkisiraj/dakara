@@ -1,9 +1,7 @@
-import Logo from '../assets/logo.png'
 import Event1 from '../assets/event1.png'
 import Event2 from '../assets/bg-journey.png'
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
-import { RxBorderSolid } from 'react-icons/rx'
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,7 +35,7 @@ function Carousel() {
                             }`}
                     />
                 ))}
-                <div class="absolute inset-0 bg-black opacity-50 hover:opacity-20"></div>
+                <div class="absolute inset-0 bg-black/50 hover:opacity-50"></div>
                 <button className="md:hidden group-hover:block absolute ml-2 top-1/2 left-0 p-2 rounded-full bg-black/50  text-white hover:text-black hover:bg-white/50 cursor-pointer" onClick={handlePrevClick}>
                     <BsChevronCompactLeft size={25} />
                 </button>
