@@ -19,11 +19,11 @@ function Navbar1() {
                  { name: "MERCH" },
              ]
     const [navbar, setNavbar] = useState(false);
-    const [color, setColor] = useState('light');
+    const [color, setColor] = useState('dark');
     const changeBg = () => {
         if (window.scrollY >= 90){
             setNavbar(true);
-            setColor ('light') ;
+            setColor ('dark') ;
         }else{
             setNavbar(false);
             setColor ('dark');
@@ -34,7 +34,7 @@ function Navbar1() {
   return (
     <>
       {['lg'].map((expand) => (
-        <Navbar key={expand} bg="" variant={color} expand={expand} className={`mb-3 z-10 text-white ${navbar ? 'bg-white text-black' : 'bg-transparent'}`} sticky='top'>
+        <Navbar key={expand} bg="" variant={color} expand={expand} className={`mb-3 z-90 text-white ${navbar ? ' bg-slate-900 text-black' : 'bg-transparent'}`} fixed='top'>
           <Container fluid>
             <Navbar.Brand href="" className=' text-md font-bold ml-5'><img src={logo} alt="" width={50} className='inline-block' /><span className='ml-2'>Dakara ID</span></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -42,17 +42,18 @@ function Navbar1() {
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              className='bg-transparent'
             >
-              <Offcanvas.Header closeButton>
+              <Offcanvas.Header closeButton className='text-black bg-white py-4'>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   Dakara ID
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body className='text-white'>
+              <Offcanvas.Body className='text-white max-lg:bg-white/20'>
 
                 <Nav className="justify-content-end flex-grow-1 pe-5 font-semibold">
                     {menus.map((menu) => (
-                    <Nav.Link className='hover:border-b-2 '>{menu.name}</Nav.Link>
+                    <Nav.Link className={`hover:border-b-2 ${navbar ? 'hover:border-b-black':'hover:border-b-white' } `}>{menu.name}</Nav.Link>
                     ))
                     }
                 </Nav>

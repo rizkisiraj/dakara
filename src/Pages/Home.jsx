@@ -4,20 +4,27 @@ import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Talent from '../Components/Talent'
 import Footer from '../Components/Footer'
+import Discord from '../Components/Discord'
 
-function Home(){
-    return(
-        <div className="intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center">
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react'
+
+function Home() {
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, [])
+    return (
+        <div className="intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center ">
             <Navbar />
             <Event />
-            <div className="container mx-auto px-4 text-white">
+            <div className="md:container mx-auto md:px-4  text-white backdrop-blur-sm">
                 <About />
-            </div>
-            <div className="md:container mx-auto md:px-4  text-white">
                 <Talent />
             </div>
             <Contact />
             <Footer />
+            <Discord />
         </div>
     )
 }
