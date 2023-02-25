@@ -17,7 +17,7 @@ function Discord() {
                     <button><span className='m-auto'><AiOutlineClose size={20} style={{ color: 'white' }} /></span></button>
                 </div>
                 <button className="m-auto h-full w-full rounded-full"
-                    onClick={() => setOpen(!open)}>
+                    onClick={() => {setOpen(!open); setClose(false);}}>
                     <FaDiscord size={50} className=' m-auto' style={{ color: '#5865F2' }} /></button>
             </div>
             <div className={`${open ? 'flex' : 'hidden'} w-[378px] h-[294px] rounded-lg bg-white fixed flex-col px-4 items-center justify-center text-center bottom-5 right-5`}>
@@ -28,7 +28,7 @@ function Discord() {
                     <button className="h-10 w-36 border-cyan-400 text-cyan-500 border-2 mr-5 rounded-md hover:bg-cyan-500 hover:text-white"
                     onClick={() => setOpen(false)}>
                         UDAH KOK</button>
-                    <button className="h-10 w-36 border-cyan-500 text-white bg-cyan-500 border-2 rounded-md">JOIN SEKARANG</button>
+                    <button className="h-10 w-36 border-cyan-500 text-gray-50 hover:text-cyan-500 bg-cyan-500 border-2 rounded-md hover:bg-white">JOIN SEKARANG</button>
                 </div>
             </div>
         </div>
