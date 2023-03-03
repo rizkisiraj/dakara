@@ -1,18 +1,30 @@
 import Risu from '../assets/Risu.png';
 import Vio from '../assets/Vio Circle.png';
-import Luxor from '../assets/Luxor Circle.png'
+import Luxor from '../assets/Luxor Circle.png';
+import RisuSetengah from '../assets/risu-setengah-badan.webp';
+import LuxorSetengah from '../assets/luxor-setengah-badan.webp';
+import ViolettaSetengah from '../assets/violetta-setengah-badan.webp';
 
-const TalentController = () => {
+const TalentController = ({ setIsShowing, setTalent, talent }) => {
   return (
-    <aside className="flex mt-5 absolute bottom-10 right-28">
-      <button className='block mr-4'>
-        <img src={Vio} alt="Vio" className="border-2 rounded-full object-cover border-blue-200 block w-[102px]" />
+    <aside className="flex flex-col md:flex-row mt-5 absolute top-10 md:top-auto right-5 md:bottom-10 md:right-28">
+      <button onClick={() => {
+        setIsShowing(false);
+        setTalent({name: 'Violetta Lupin', image:ViolettaSetengah})
+        }} className='block mb-2 md:mr-4'>
+        <img src={Vio} alt="Vio" className={`rounded-full object-cover ${talent.name === 'Violetta Lupin' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
       </button>
-      <button className='block mr-4'>
-        <img src={Luxor} alt="Luxor" className="block w-[102px] object-cover" />
+      <button onClick={() => {
+        setIsShowing(false);
+        setTalent({name: 'Maximillian Luxor', image:LuxorSetengah})
+        }} className='block mb-2 md:mr-4'>
+        <img src={Luxor} alt="Luxor" className={`rounded-full object-cover ${talent.name === 'Maximillian Luxor' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
       </button>
-      <button className="block mr-4">
-        <img src={Risu} alt="Riso" className="block w-[102px] h-[102px] object-cover" />
+      <button onClick={() => {
+        setIsShowing(false)
+        setTalent({name: 'Ariya Risu', image:RisuSetengah})
+        }} className="block mb-2 md:mr-4">
+        <img src={Risu} alt="Riso" className={`rounded-full object-cover ${talent.name === 'Ariya Risu' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
         </button>
     </aside>
   )
