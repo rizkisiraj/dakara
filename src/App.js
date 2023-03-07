@@ -5,8 +5,8 @@ import './App.css';
 import Intro from './Pages/Intro'
 import Home from './Pages/Home'
 import Merch from './Pages/Merch';
-import About from './Pages/About';
 import Talent from './Pages/Talent';
+import About from './Components/About';
 
 function App() {
   return (
