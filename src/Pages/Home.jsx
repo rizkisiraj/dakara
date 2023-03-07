@@ -15,11 +15,11 @@ function Home() {
         AOS.init({ duration: 2000 });
     }, [])
     return (
-        <div className="intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center ">
-            <Navbar />
+        <div className="intro  h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+            <Navbar/>
             <Event />
             <div className="md:container mx-auto md:px-4  text-white backdrop-blur-sm">
-                <About />
+                <About/>
                 <Talent />
             </div>
             <Contact />
