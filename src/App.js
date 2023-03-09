@@ -6,7 +6,7 @@ import Intro from './Pages/Intro'
 import Home from './Pages/Home'
 import Merch from './Pages/Merch';
 import Talent from './Pages/Talent';
-import About from './Components/About';
+import About from './Pages/About';
 import FullTalent from './Pages/FullTalent';
 
 function App() {

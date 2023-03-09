@@ -17,6 +17,7 @@ import { useEffect } from 'react'
 
 function About() {
     useEffect(() => {
+        window.scrollTo(0,0);
         AOS.init({ duration: 2000 });
     }, [])
     return (
