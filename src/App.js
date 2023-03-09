@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import Merch from './Pages/Merch';
 import Talent from './Pages/Talent';
 import About from './Components/About';
+import FullTalent from './Pages/FullTalent';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/merch' element={<Merch />} />
         <Route path='/about' element={<About />} />
         <Route path='/talent' element={<Talent />} />
+        <Route path='/talent/:id' element={<FullTalent />} />
       </Routes>
     </Router>
   );

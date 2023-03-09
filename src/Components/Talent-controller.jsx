@@ -12,19 +12,19 @@ const TalentController = ({ setIsShowing, setTalent, talent }) => {
         setIsShowing(false);
         setTalent({name: 'Violetta Lupin', image:ViolettaSetengah})
         }} className='block mb-2 md:mr-4'>
-        <img src={Vio} alt="Vio" className={`rounded-full object-cover ${talent.name === 'Violetta Lupin' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
+        <img src={Vio} alt="Vio" className={`rounded-full object-cover ${talent.name === 'Violetta Lupin' ? 'border-2 border-blue-200 w-[76px] md:w-[110px]' : null} block w-[68px] md:w-[102px]`} />
       </button>
       <button onClick={() => {
         setIsShowing(false);
         setTalent({name: 'Maximillian Luxor', image:LuxorSetengah})
         }} className='block mb-2 md:mr-4'>
-        <img src={Luxor} alt="Luxor" className={`rounded-full object-cover ${talent.name === 'Maximillian Luxor' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
+        <img src={Luxor} alt="Luxor" className={`rounded-full object-cover ${talent.name === 'Maximillian Luxor' ? 'border-2 border-blue-200 w-[76px] md:w-[110px]' : null} block w-[68px] md:w-[102px]`} />
       </button>
       <button onClick={() => {
         setIsShowing(false)
         setTalent({name: 'Ariya Risu', image:RisuSetengah})
         }} className="block mb-2 md:mr-4">
-        <img src={Risu} alt="Riso" className={`rounded-full object-cover ${talent.name === 'Ariya Risu' ? 'border-2 border-blue-200' : null} block w-[68px] md:w-[102px]`} />
+        <img src={Risu} alt="Riso" className={`rounded-full object-cover ${talent.name === 'Ariya Risu' ? 'border-2 border-blue-200 w-[76px] md:w-[110px]' : null} block w-[68px] md:w-[102px]`} />
         </button>
     </aside>
   )
