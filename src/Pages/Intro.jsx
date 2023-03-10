@@ -9,7 +9,7 @@ function Intro() {
     return (
         <div className=" max-w-screen">
             <div className=" h-screen">
-                <video className=" h-screen w-screen object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay controls loop >
+                <video className=" h-screen w-screen object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay loop >
                     <source src={MyVideo} type="video/webm" />
                     Your browser does not support HTML5 video.
                 </video>
