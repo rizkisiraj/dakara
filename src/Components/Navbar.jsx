@@ -5,18 +5,20 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useLocation } from 'react-router-dom';
 
 import logo from '../assets/logo.png';
 
 
 function Navbar1() {
+    const location = useLocation();
     const menus = [
-                 { name: "INTRO" },
-                 { name: "HOME" },
-                 { name: "TALENT" },
-                 { name: "ABOUT" },
-                 { name: "NEWS" },
-                 { name: "MERCH" },
+                 { name: "intro" },
+                 { name: "home" },
+                 { name: "talent" },
+                 { name: "about" },
+                 { name: "news" },
+                 { name: "merch" },
              ]
     const [navbar, setNavbar] = useState(false);
     const [color, setColor] = useState('dark');
@@ -53,7 +55,7 @@ function Navbar1() {
 
                 <Nav className="justify-content-end flex-grow-1 pe-5 font-semibold">
                     {menus.map((menu) => (
-                    <Nav.Link className={`hover:border-b-2 ${navbar ? 'hover:border-b-black':'hover:border-b-white' } `}>{menu.name}</Nav.Link>
+                    <Nav.Link href={`/${menu.name === 'intro' ? '' : menu.name}`} className={`navbar-link ${location.pathname === `/${menu.name}` ? 'active-navbar' : ''}`}>{menu.name}</Nav.Link>
                     ))
                     }
                 </Nav>

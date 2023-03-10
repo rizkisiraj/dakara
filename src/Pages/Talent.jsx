@@ -31,7 +31,7 @@ const Talent = () => {
     setSmallScreen(smallScreen);
   },[])
 
-  const [talent, setTalent] = useState({name: 'Risu', image: Risu});
+  const [talent, setTalent] = useState({name: 'Ariya Risu', image: Risu});
   const [isShowing, setIsShowing] = useState(false);
   const [isSmallScreen, setSmallScreen] = useState(false)
 
