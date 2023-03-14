@@ -1,4 +1,4 @@
-import Risu from '../assets/Risu.png';
+import Risu from '../assets/Risu Circle.webp';
 import Vio from '../assets/Vio Circle.png';
 import Luxor from '../assets/Luxor Circle.png';
 import RisuSetengah from '../assets/risu-setengah-badan.webp';

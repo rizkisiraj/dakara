@@ -7,7 +7,7 @@ function Intro() {
     const [muted, setMuted] = useState(false);
     const navigate = useNavigate()
     return (
-        <div className=" max-w-screen">
+        <div className="font-sans max-w-screen">
             <div className=" h-screen">
                 <video className=" h-screen w-screen object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay controls loop >
                     <source src={MyVideo} type="video/webm" />
