@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import Merch from './Pages/Merch';
 import Talent from './Pages/Talent';
 import About from './Pages/About';
+import News from './Pages/News';
 import FullTalent from './Pages/FullTalent';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/talent' element={<Talent />} />
         <Route path='/talent/:id' element={<FullTalent />} />
+        <Route path='/news' element={<News />} />
       </Routes>
     </Router>
   );
