@@ -57,7 +57,8 @@ function Talent() {
                 </Carousel>
 
                 {/* Profil Singkat */}
-                <div className={`flex absolute max-md:flex-col max-md:items-center top-0 z-20 w-full border-[2px] h-full max-md:min-h-[400px] bg-indigo-900/50 rounded-xl duration-1000 ${open ? 'block' : 'hidden'}`}
+                <div className={`flex absolute max-md:flex-col max-md:items-center top-0 z-20 w-full border-[2px] h-full max-md:min-h-[400px] rounded-xl duration-1000 ${open ? 'block' : 'hidden'} 
+                    bg-gradient-to-b  from-[#512275] to-[#3B3BA5]`}
                     >
                     <div className="absolute w-10 h-10 rounded-full -right-5 -top-5 max-md:right-1 max-md:top-1 bg-white/50 flex" onClick={() => setOpen(!open)}>
                         <span className='m-auto'><AiOutlineClose size={20} /></span>

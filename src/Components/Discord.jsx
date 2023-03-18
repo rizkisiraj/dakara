@@ -1,7 +1,8 @@
 import { FaDiscord } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Discord() {
 
@@ -20,15 +21,17 @@ function Discord() {
                     onClick={() => {setOpen(!open); setClose(false);}}>
                     <FaDiscord size={50} className=' m-auto' style={{ color: '#5865F2' }} /></button>
             </div>
-            <div className={`${open ? 'flex' : 'hidden'} w-[378px] h-[294px] rounded-lg bg-white fixed flex-col px-4 items-center justify-center text-center bottom-5 right-5`}>
-                <h2 className=" text-2xl font-semibold m-0 ">DISCORD</h2>
-                <p className=" text-md font-semibold mt-[37px] mb-16">Ayo join grup Discord kami sekarang!!
+            <div className={`${open ? 'flex' : 'hidden'} w-[378px] h-[294px] max-sm:w-[318px] max-sm:h-[234px] max-[356px]:w-[240px]  max-[356px]:h-[174px] rounded-lg bg-white fixed flex-col px-4 max-[356px]:px-1" items-center justify-center text-center bottom-5 right-5`}>
+                <h2 className=" text-2xl font-bold m-0 max-md:text-xl max-[356px]:text-base">DISCORD</h2>
+                <p className=" text-md font-semibold mt-[37px] mb-16 max-[356px]:my-5 max-md:text-sm max-[356px]:text-xs">Ayo join grup Discord kami sekarang!!
                     <br /> Mau tunggu apalagi??</p>
-                <div className="text-sm font-semibold">
-                    <button className="h-10 w-36 border-cyan-400 text-cyan-500 border-2 mr-5 rounded-md hover:bg-cyan-500 hover:text-white"
+                <div className="text-sm max-md:text-xs font-semibold max-[356px]:text-[9px]">
+                    <Link className="py-2.5 px-8 max-md:py-2 max-md:px-6 max-[356px]:py-1.5 max-[356px]:px-4 border-cyan-400 text-cyan-500 border-2 mr-5 max-[356px]:mr-2 rounded-md hover:bg-cyan-500 hover:text-white no-underline"
                     onClick={() => setOpen(false)}>
-                        UDAH KOK</button>
-                    <button className="h-10 w-36 border-cyan-500 text-gray-50 hover:text-cyan-500 bg-cyan-500 border-2 rounded-md hover:bg-white">JOIN SEKARANG</button>
+                        UDAH KOK</Link>
+                    <Link className="py-2.5 px-3 max-md:py-2 max-md:px-5 max-[356px]:py-1.5 max-[356px]:px-0 border-cyan-500 text-gray-50 hover:text-cyan-500 bg-cyan-500 border-2 rounded-md hover:bg-white no-underline" 
+                        to={'https://discord.gg/nJBCre7tmt'}  target="_blank"
+                        >JOIN SEKARANG</Link>
                 </div>
             </div>
         </div>
