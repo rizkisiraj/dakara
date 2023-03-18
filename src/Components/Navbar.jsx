@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import logo from '../assets/logo.png';
 
@@ -36,7 +37,7 @@ function Navbar1() {
   return (
     <>
       {['lg'].map((expand) => (
-        <Navbar key={expand} bg="" variant={color} expand={expand} className={`mb-3 z-90 text-white ${navbar ? ' bg-slate-900 text-black' : 'bg-transparent'}`} fixed='top'>
+        <Navbar key={expand} bg="" variant={color} expand={expand} className={`mb-3 z-90 font-sans text-white ${navbar ? ' bg-slate-900 text-black' : 'bg-transparent'}`} fixed='top'>
           <Container fluid>
             <Navbar.Brand href="" className=' text-md font-bold ml-5'><img src={logo} alt="" width={50} className='inline-block' /><span className='ml-2'>Dakara ID</span></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -64,6 +65,7 @@ function Navbar1() {
           </Container>
         </Navbar>
       ))}
+      <Outlet />
     </>
   );
 }

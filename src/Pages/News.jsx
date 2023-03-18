@@ -12,9 +12,10 @@ function News() {
         AOS.init({ duration: 2000 });
     }, [])
     return (
-        <div className="intro  min-h-screen bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
-            <Navbar />
-            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-xs:grid-cols-1 gap-12  max-md:gap-8 max-sm:gap-4 w-10/12 mx-auto my-36">
+        <div className="intro font-sans h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+            <Event />
+
+            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-10 w-10/12 mx-auto lg:my-20">
                 <div class="col-span-1 w-full aspect-[3/2] rounded-md relative">
                     <div className='flex w-full aspect-square border-[1px] border-white justify-center rounded-xl py-2'>
                         <img src={Merch1} alt="" className='h-full' />

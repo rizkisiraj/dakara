@@ -31,7 +31,7 @@ const Talent = () => {
     setSmallScreen(smallScreen);
   },[])
 
-  const [talent, setTalent] = useState({name: 'Ariya Risu', image: Risu});
+  const [talent, setTalent] = useState({name: 'Ariya Risu', image: 'risu-setengah-badan.webp'});
   const [isShowing, setIsShowing] = useState(false);
   const [isSmallScreen, setSmallScreen] = useState(false)
 
@@ -41,10 +41,9 @@ const Talent = () => {
 
   return (
     <>
-      <Navbar1 />
-      <div className='font-sans w-full pt-20 min-h-screen relative bg-[url("./assets/bg-talent.png")] bg-cover bg-no-repeat bg-center flex justify-center items-end overflow-x-hidden'>
+      <div className=' font-sans w-full pt-20 min-h-screen relative bg-[url("./assets/bg-talent.png")] bg-cover bg-no-repeat bg-center flex justify-center items-end overflow-x-hidden'>
         <div className="relative w-full text-center flex justify-center overflow-y-hidden">
-          <motion.img onClick={onClickHandler} key={talent.name} initial={{y: 500}} animate={isShowing ?  (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{y: {duration: .5}}} src={talent.image} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
+          <motion.img onClick={onClickHandler} key={talent.name} initial={{y: 500}} animate={isShowing ?  (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{y: {duration: .5}}} src={require(`../assets/${talent.image}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
         </div>
           <motion.div initial={{visibility: 'none'}} animate={isShowing ? 'visible' : 'notVisible'} transition={{visibility: {duration: 1}}} variants={infoVariant} className="text-[#3B3BA5] absolute bottom-10 md:bottom-auto md:top-40 md:right-20 lg:right-32 xl:right-64 w-[80%] md:w-full max-w-[493px] bg-white h-fit text-center py-7 md:py-14 rounded-xl shadow-talentCard">
             <h2 className="text-xl md:text-5xl uppercase mb-4">{talent.name}</h2>

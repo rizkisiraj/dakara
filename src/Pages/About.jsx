@@ -39,8 +39,7 @@ function About() {
     }
   `;
     return (
-        <div className="intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center ">
-            <Navbar />
+        <div className="font-sans intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center ">
             <div className="container md:px-5 max-md:px-3 text-white ">
 
                 {/* About */}

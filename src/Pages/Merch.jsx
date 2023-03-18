@@ -3,8 +3,7 @@ import Navbar1 from "../Components/Navbar";
 const Merch = () => {
   return (
     <>
-      <Navbar1 />
-      <div className="bg-[url('./assets/bg-home.png')] bg-center bg-cover w-full min-h-screen px-36 pt-24">
+      <div className="font-sans bg-[url('./assets/bg-home.png')] bg-center bg-cover w-full min-h-screen px-36 pt-24">
         <div className="w-full flex gap-4 mb-8">
           <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Kaos</button>
           <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Jaket</button>
