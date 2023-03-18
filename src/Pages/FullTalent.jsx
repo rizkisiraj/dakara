@@ -12,8 +12,7 @@ export default function FullTalent({ talent }) {
 
   return (
     <>
-      <Navbar1 />
-      <main className="w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover bg-top bg-fixed">
+      <main className="font-sans w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover bg-top bg-fixed">
         <div className=" flex flex-col w-full">
           <div className=" w-[30%] max-lg:w-1/3  max-md:w-2/3 mx-auto mt-40">
             <img className="w-full" src={RisuFullBody} alt="karakter" />

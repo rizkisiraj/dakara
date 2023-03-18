@@ -12,8 +12,7 @@ function News() {
         AOS.init({ duration: 2000 });
     }, [])
     return (
-        <div className="intro  h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
-            <Navbar />
+        <div className="intro font-sans h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
             <Event />
 
             <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-10 w-10/12 mx-auto lg:my-20">

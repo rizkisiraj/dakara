@@ -68,9 +68,9 @@ function Talent() {
                         <h2 className='lg:text-4xl max-lg:text-2xl max-md:text-xl uppercase text-center font-semibold'>{talent.Nama}</h2>
                         <p className='lg:mt-4 mb-3 max-md:text-center max-md:text-sm max-md:mb-1'>{talent['Profile Singkat']}</p>
                         <ul className='max-md:mx-auto max-md:text-sm pl-0'>
-                            <li>Ras : Manusia</li>
-                            <li>Ulang Tahun : 29 Agustus</li>
-                            <li>Tinggi : 173cm</li>
+                            <li>Ras : {talent.Ras}</li>
+                            <li>Ulang Tahun : {talent['Ulang Tahun']}</li>
+                            <li>Tinggi : {talent.Tinggi}</li>
                         </ul>
                         <button onClick={() => navigate('/talent')} className='w-40 mx-auto h-auto py-1.5 px-4 mt-8 max-md:mt-0  bg-white/50 hover:bg-white/30 rounded-xl max-md:rounded-md border-white border-2 font-semibold text-md max-md:text-sm shadow-blue-800 shadow-2xl'>
                             <span style={{ textShadow: '0px 2px 2px rgb(47 79 79) ' }}>Lebih Detail</span>
