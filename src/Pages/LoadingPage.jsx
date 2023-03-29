@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
-import '../css/BgEffect.css';
-
 const LoadingPage = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
