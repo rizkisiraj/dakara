@@ -28,7 +28,7 @@ function About() {
     ];
 
     return (
-        <div className="font-sans intro h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+        <div className="font-sans intro bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
             <div className="container md:px-5 max-md:px-3 text-white ">
 
                 {/* About */}
@@ -36,7 +36,7 @@ function About() {
                     <motion.div className='mx-auto text-center'
                         initial = {{opacity : 0, y: -100}}
                         animate = {{opacity : 1, y:0} }
-                        transition={{delay : 0.3, duration : 1.5}}>
+                        transition={{duration : 1.5}}>
                         <h2 className=' text-5xl max-sm:text-4xl font-bold py-4'>Dakara ID</h2>
                         <p className=" lg:px-16 py-4 px-4 font-normal text-lg  border-t-2 ">Dakara Live merupakan agensi entertaiment dari Indonesia yang
                             bergerak dalam bidang Virtual Youtuber, kami bertujuan
@@ -51,7 +51,7 @@ function About() {
                     <motion.div className='w-full flex justify-center space-x-5 items-center max-md:flex-col bg-gradient-to-b from-cyan-600 to-blue-700 md:aspect-[16/7] rounded-3xl max-md:p-5'
                         initial = {{opacity : 0, x : 200}}
                         whileInView = {{opacity : 1, x : 0}}
-                        transition={{duration : 1.5, delay: 0.2}}>
+                        transition={{duration : 1.5}}>
 
                         <h2 className='md:hidden text-[42px] max-md:text-3xl'>Visi</h2>
                         <div className='w-2/6 flex justify-center items-center mx-auto my-3'>
@@ -76,7 +76,7 @@ function About() {
                     <motion.div className='w-full flex justify-center space-x-5 items-center max-md:flex-col bg-gradient-to-b from-blue-800 via-violet-600 to-fuchsia-300 md:aspect-[16/7] rounded-3xl max-md:p-5'
                         initial = {{opacity : 0, x : -200}}
                         whileInView = {{opacity : 1, x : 0}}
-                        transition={{duration : 1.5, delay: 0.2}}>
+                        transition={{duration : 1.5}}>
                         <h2 className='md:hidden text-[42px] max-md:text-3xl'>Misi</h2>
                         <div className='md:hidden w-2/6 flex justify-center items-center mx-auto my-3'>
                             <motion.img src={Logo} alt="" className='w-9/12 max-sm:w-full'
@@ -105,13 +105,13 @@ function About() {
                     <motion.h2 className='md:py-14 max-md:py-5 md:text-[40px] max-md:text-3xl text-center'
                         initial = {{opacity : 0}}
                         whileInView = {{opacity : 1}}
-                        transition={{ delay : 0.2, duration : 1.5 }}>
+                        transition={{ duration : 1.5 }}>
                         Meet Our Team
                     </motion.h2>
                     <motion.div className='lg:w-5/12 max-lg:w-7/12 max-md:w-9/12 max-sm:w-10/12 aspect-video grid grid-cols-4 lg:gap-12 justify-items-center max-lg:gap-8'
                         initial = {{opacity : 0}}
                         whileInView = {{opacity : 1}}
-                        transition={{ delay : 0.4, duration : 1.5 }}>
+                        transition={{ duration : 1.5 }}>
                         {imgStaff.map((item, index) => (
                             <div className="col-span-2 w-full aspect-[5/6] rounded-md relative" key={index}>
                                 <img src={item.staff} alt="" className=' object-cover rounded-md' />

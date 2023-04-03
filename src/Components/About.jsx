@@ -9,7 +9,7 @@ function About() {
   return (
 
     <div className="flex lg:flex-row justify-center lg:w-10/12 max-lg:w-full  mx-auto items-center max-md:flex-col md:h-screen text-center max-md:px-2 max-md:my-28">
-      
+
       {/* logo */}
       <motion.div className='basis-1/4 md:w-[290px] max-md:w-[200px] max-md:h-auto h-3/5 mx-auto flex items-center max-md:mb-5'
         initial = {{opacity : 0}}

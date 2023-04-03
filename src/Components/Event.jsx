@@ -30,7 +30,7 @@ function Event() {
                         key={index}
                         initial = {{opacity : 0}}
                         animate = {{opacity : 1}}
-                        transition={{delay : 0.5, duration : 1}}>
+                        transition={{duration : 1}}>
                             <img
                                 key={index}
                                 src={item.src}
