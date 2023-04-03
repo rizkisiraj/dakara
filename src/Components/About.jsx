@@ -15,9 +15,9 @@ function About() {
         initial = {{opacity : 0}}
         whileInView = {{opacity : 1}}
         transition={{duration : 2}}>
-        <motion.img src={Logo} alt="" className='mx-auto w-full pr-0 max-md:w-48 max-sm:w-44 items-center'
+        <motion.img src={Logo} alt="logo" className='mx-auto w-full pr-0 max-md:w-48 max-sm:w-44 items-center'
           whileInView = {{y : [-20, 20, -20]}}
-          transition={{repeat : Infinity}}/>
+          transition={{repeat : Infinity, duration : 2}}/>
       </motion.div>
 
       {/* About */}

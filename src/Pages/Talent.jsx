@@ -43,7 +43,7 @@ const Talent = () => {
 
   return (
     <>
-      <div className=' font-sans w-full pt-20 min-h-screen relative bg-[url("./assets/bg-talent.png")] bg-cover bg-no-repeat bg-center flex justify-center items-end overflow-x-hidden'>
+      <div className=' font-sans w-full pt-20 min-h-screen relative bg-[url("./assets/bg-talent.webp")] bg-cover bg-no-repeat bg-center flex justify-center items-end overflow-x-hidden'>
         <div className="relative w-full text-center flex justify-center overflow-y-hidden">
           <motion.img onClick={onClickHandler} key={talent.Nama} initial={{y: 500}} animate={isShowing ?  (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{y: {duration: .5}}} src={require(`../assets/${talent["Profile Setengah Badan"]}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
         </div>

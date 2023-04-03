@@ -38,10 +38,6 @@ function Event() {
                                 className={`w-full object-cover object-top brightness-75 md:rounded-xl`}  
                             />
                             <div className="w-full absolute text-white inset-0 bg-black/30 ease-in duration-150 transition-all hover:bg-black/0 md:rounded-xl">
-                                <div className=' absolute bottom-16 left-12'>
-                                    <h2 className=' text-2xl m-0'>NEWS</h2>
-                                    <p className=' text-lg m-0'>Selengkapnya</p>
-                                </div>
                             </div>
                         </motion.div>
                     ))}
