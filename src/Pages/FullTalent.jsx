@@ -4,7 +4,7 @@ import talents from "../Talents.json";
 import {FaRegUserCircle} from 'react-icons/fa'
 import {MdDateRange} from 'react-icons/md'
 import {GiBodyHeight} from 'react-icons/gi'
-import { useLocation } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import LoadingPage from "./LoadingPage";
 
@@ -12,7 +12,7 @@ import LoadingPage from "./LoadingPage";
 
 export default function FullTalent() {
 
-  const { id } = useLocation();
+  const { id } = useParams();
   const [talent, setTalent] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,7 +22,7 @@ export default function FullTalent() {
         setTalent(tal);
         setIsLoading(false);
       }
-    },[])
+    })
   },[id])
 
   return (

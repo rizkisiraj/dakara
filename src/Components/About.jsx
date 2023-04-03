@@ -12,19 +12,19 @@ function About() {
 
       {/* logo */}
       <motion.div className='basis-1/4 md:w-[290px] max-md:w-[200px] max-md:h-auto h-3/5 mx-auto flex items-center max-md:mb-5'
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2.5 }}>
+        initial = {{opacity : 0}}
+        whileInView = {{opacity : 1}}
+        transition={{duration : 2}}>
         <motion.img src={Logo} alt="" className='mx-auto w-full pr-0 max-md:w-48 max-sm:w-44 items-center'
-          whileInView={{ y: [-20, 20, -20] }}
-          transition={{ repeat: Infinity, duration: 2 }} />
+          whileInView = {{y : [-20, 20, -20]}}
+          transition={{repeat : Infinity}}/>
       </motion.div>
 
       {/* About */}
       <motion.div className='basis-3/5 lg:ml-2 px-1'
-        initial={{ opacity: 0, x: 250 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5 }}>
+        initial={{opacity: 0 ,x : 250}}
+        animate={{opacity: 1 ,x : 0}}
+        transition={{duration : 1}}>
         <h2 className=' text-4xl max-md:text-3xl max-sm:text-2xl mt-10 font-semibold mx-auto max-md:mt-1'>Tentang Kami</h2>
         <p className="mt-4 py-2 md:pr-5 text-lg max-md:text-md max-sm:text-sm max-w-[38rem] max-lg:max-w-md mx-auto border-t-2 border-r-2/2 text-center">Dakara Live merupakan agensi entertaiment dari Indonesia yang
           bergerak dalam bidang Virtual Youtuber, kami bertujuan
