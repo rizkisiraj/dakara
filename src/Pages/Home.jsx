@@ -11,9 +11,9 @@ import AutoScroll from '../Components/AutoScroll'
 function Home() {
     
     return (
-        <div className="font-sans intro  h-max= bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+        <div className="font-sans intro bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
             <Event />
-            <div className="md:container mx-auto md:px-4  text-white backdrop-blur-sm">
+            <div className="md:container mx-auto md:px-4  text-white">
                 <About/>
                 <Talent />
             </div>

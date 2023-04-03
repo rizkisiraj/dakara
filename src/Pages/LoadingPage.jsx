@@ -51,65 +51,6 @@ function LoadingPage() {
                             <img src={Logo} className='w-40 h-40 mx-auto mb-1'  alt="" />
                             <span className='text-white font-semibold text-2xl'>Dakara ID</span>
                         </motion.div>
-
-
-                    {/* <div className='flex items-center justify-center'>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.1, duration: 1 }}>
-                            <motion.img src={Logo} alt="" className=' w-28 max-md:w-20'
-                                animate={{ y: [-5, 5, -5] }}
-                                transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} />
-                        </motion.div>
-
-                        <motion.span className='text-white font-semibold text-3xl ml-2 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.1 }}>D</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.7, duration: 0.1 }}>a</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.9, duration: 0.1 }}>k</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 1.1, duration: 0.1 }}>a</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500 }}
-                            animate={{ x: 0 }}
-                            transition={{ delay: 1.3, duration: 0.1 }}>r</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 1.5, duration: 0.1 }}>a</motion.span>
-
-                        <motion.span className='text-white font-semibold text-3xl ml-3 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 1.7, duration: 0.1 }}>I</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500 }}
-                            animate={{ x: 0 }}
-                            transition={{ delay: 1.9, duration: 0.1 }}>D</motion.span>
-
-                        <motion.span className='text-white font-semibold text-3xl ml-1 max-md:text-xl'
-                            initial={{ x: 1500, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 2.1, duration: 0.1 }}>.</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-0.5 max-md:text-xl'
-                            initial={{ x: 1500 }}
-                            animate={{ x: 0 }}
-                            transition={{ delay: 2.3, duration: 0.1 }}>.</motion.span>
-                        <motion.span className='text-white font-semibold text-3xl ml-1 max-md:text-xl'
-                            initial={{ x: 1500 }}
-                            animate={{ x: 0 }}
-                            transition={{ delay: 2.5, duration: 0.1 }}>.</motion.span>
-                    </div> */}
                 </div>
 
             ) : (

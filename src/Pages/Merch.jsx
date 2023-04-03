@@ -1,51 +1,63 @@
-import Navbar1 from "../Components/Navbar";
+import Merch1 from '../assets/merch.png'
 
-const Merch = () => {
-  return (
-    <>
-      <div className="font-sans bg-[url('./assets/bg-home.png')] bg-center bg-cover w-full min-h-screen px-36 pt-24">
-        <div className="w-full flex gap-4 mb-8">
-          <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Kaos</button>
-          <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Jaket</button>
-          <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Totebag</button>
-          <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Aksesoris</button>
-          <button className="block min-w-[44px] min-h-[44px] px-4 bg-white rounded-lg">Celana</button>
+function Merch() {
+    return (
+        <div className="intro font-sans min-h-screen bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+
+            <div className="grid grid-cols-3 max-lg:grid-cols-2 gap-10 w-10/12 mx-auto my-28">
+                
+                <div class="col-span-1 w-full aspect-[3/2] rounded-md relative">
+                    <div className='flex w-full aspect-square border-[1px] border-white justify-center rounded-xl py-2'>
+                        <img src={Merch1} alt="" className='h-full' />
+                    </div>
+                    <div className='flex flex-col text-white'>
+                        <div className='flex justify-between items-center mb-2 mt-3'>
+                            <span className=' text-lg max-md:text-base max-sm:text-xs font-semibold bg-[#9625A8] py-0.5  px-3 max-sm:px-1 rounded-full '>Voicepack</span>
+                        </div>
+                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'>GongXi Luxor Ganci</p>
+                    </div>
+                </div>
+
+                <div class="col-span-1 w-full aspect-[3/2] rounded-md relative">
+                    <div className='flex w-full aspect-square border-[1px] border-white justify-center rounded-xl py-2'>
+                        <img src={Merch1} alt="" className='h-full' />
+                    </div>
+                    <div className='flex flex-col text-white'>
+                        <div className='flex justify-between items-center mb-2 mt-3'>
+                            <span className=' text-lg max-md:text-base max-sm:text-xs font-semibold bg-[#9625A8] py-0.5  px-3 max-sm:px-1 rounded-full '>Voicepack</span>
+                        </div>
+                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'>GongXi Luxor Ganci</p>
+                    </div>
+                </div>
+
+                <div class="col-span-1 w-full aspect-[3/2] rounded-md relative">
+                    <div className='flex w-full aspect-square border-[1px] border-white justify-center rounded-xl py-2'>
+                        <img src={Merch1} alt="" className='h-full' />
+                    </div>
+                    <div className='flex flex-col text-white'>
+                        <div className='flex justify-between items-center mb-2 mt-3'>
+                            <span className=' text-lg max-md:text-base max-sm:text-xs font-semibold bg-[#9625A8] py-0.5  px-3 max-sm:px-1 rounded-full '>Voicepack</span>
+                        </div>
+                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'>GongXi Luxor Ganci</p>
+                    </div>
+                </div>
+
+                <div class="col-span-1 w-full aspect-[3/2] rounded-md relative">
+                    <div className='flex w-full aspect-square border-[1px] border-white justify-center rounded-xl py-2'>
+                        <img src={Merch1} alt="" className='h-full' />
+                    </div>
+                    <div className='flex flex-col text-white'>
+                        <div className='flex justify-between items-center mb-2 mt-3'>
+                            <span className=' text-lg max-md:text-base max-sm:text-xs font-semibold bg-[#9625A8] py-0.5  px-3 max-sm:px-1 rounded-full '>Voicepack</span>
+                        </div>
+                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'>GongXi Luxor Ganci</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <div className="w-full grid grid-cols-4 gap-16">
-            <div className="rounded-lg overflow-hidden bg-white min-h-[390px]">
-              <img src="https://picsum.photos/200" alt="card-img" className="w-full mb-2 h-52 object-cover block" />
-              <div>
-                <p className="text-lg font-semibold px-4">Naela Makan Nasi</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white min-h-[390px]">
-              <img src="https://picsum.photos/200" alt="card-img" className="w-full mb-2 h-52 object-cover block" />
-              <div>
-                <p className="text-lg font-semibold px-4">Naela Makan Nasi</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white min-h-[390px]">
-              <img src="https://picsum.photos/200" alt="card-img" className="w-full mb-2 h-52 object-cover block" />
-              <div>
-                <p className="text-lg font-semibold px-4">Naela Makan Nasi</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white min-h-[390px]">
-              <img src="https://picsum.photos/200" alt="card-img" className="w-full mb-2 h-52 object-cover block" />
-              <div>
-                <p className="text-lg font-semibold px-4">Naela Makan Nasi</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white min-h-[390px]">
-              <img src="https://picsum.photos/200" alt="card-img" className="w-full mb-2 h-52 object-cover block" />
-              <div>
-                <p className="text-lg font-semibold px-4">Naela Makan Nasi</p>
-              </div>
-            </div>
-        </div>
-      </div>
-    </>
-  )
+    )
 }
 
 export default Merch;

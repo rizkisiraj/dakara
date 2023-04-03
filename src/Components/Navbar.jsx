@@ -18,7 +18,6 @@ function Navbar1() {
                  { name: "home" },
                  { name: "talent" },
                  { name: "about" },
-                 { name: "news" },
                  { name: "merch" },
              ]
     const [navbar, setNavbar] = useState(false);
