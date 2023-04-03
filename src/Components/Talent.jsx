@@ -3,9 +3,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { AiOutlineClose } from "react-icons/ai";
+
 import { useState } from 'react';
 import talents from "../Talents.json"
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Talent() {
     const responsive = {
@@ -22,30 +24,31 @@ function Talent() {
     const navigate = useNavigate()
 
     return (
-        <div className="flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen max-md:my-40 mx-auto items-center relative "
-            data-aos="fade-up"
-            data-aos-duration="5000">
+        <motion.div className="flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen max-md:my-40 mx-auto items-center relative"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 2 }}>
             <span className="font-semibold text-3xl max-md:text-3xl max-sm:text-2xl w-full md:my-5 max-md:my-4  max-md:ml-2 ">Our Talent</span>
             <div className='w-full h-auto relative'>
                 <Carousel responsive={responsive} className='z-10'>
                     {talents.length && talents.map((item, index) => (
-                        <div key={item.Nama}
-                        className="flex w-full justify-center key={index} aspect-[3/5] max-sm:aspect-[1/2] relative brightness-90 group object-contain " >
+                        <div className="flex w-full justify-center key={index} aspect-[3/5] max-sm:aspect-[1/2] relative brightness-90 group object-contain "
+                            key={item.Nama}>
                             <img
                                 onClick={() => {
-                                    if(talents[index] === talent)
-                                    setTalent(talent[index]);
+                                    if (talents[index] === talent)
+                                        setTalent(talent[index]);
                                     setOpen(!open)
                                 }}
                                 src={require(`../assets/${item.GambarIntro}`)}
                                 alt="talent"
                                 className={`w-full object-cover object-top brightness-95`}
-                                
+
                             />
                             <div onClick={() => {
-                                    setTalent(talents[index]);
-                                    setOpen(!open)
-                                }} className="absolute inset-0 bg-gradient-to-b from-transparent group-hover:from-black/20 group-hover:via-black/50 group-hover:to-black/80"></div>
+                                setTalent(talents[index]);
+                                setOpen(!open)
+                            }} className="absolute inset-0 bg-gradient-to-b from-transparent group-hover:from-black/20 group-hover:via-black/50 group-hover:to-black/80"></div>
                             <div className=' absolute group-hover:block bottom-7 left-6 max-md:text-center max-md:left-1/2 max-md:-translate-x-1/2 translate-y-[200%] group-hover:translate-y-0 transition-all duration-500'>
                                 <span className='lg:text-xl max-md:text-md font-bold uppercase block'>{item.Nama}</span>
                                 <span className='lg:text-md max-md:text-sm font-light'>Gen 1 Talent</span>
@@ -56,9 +59,10 @@ function Talent() {
                 </Carousel>
 
                 {/* Profil Singkat */}
-                <div className={`flex absolute max-md:flex-col max-md:items-center top-0 z-20 w-full border-[2px] h-full max-md:min-h-[400px] rounded-xl duration-1000 ${open ? 'block' : 'hidden'} 
-                    bg-gradient-to-b  from-[#512275] to-[#3B3BA5]`}
-                    >
+                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center top-0 z-20 w-full border-[2px] h-full max-md:min-h-[400px] rounded-xl duration-1000 bg-gradient-to-b  from-[#512275] to-[#3B3BA5]`}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }} >
                     <div className="absolute w-10 h-10 rounded-full -right-5 -top-5 max-md:right-1 max-md:top-1 bg-white/50 flex" onClick={() => setOpen(!open)}>
                         <span className='m-auto'><AiOutlineClose size={20} /></span>
                     </div>
@@ -80,10 +84,10 @@ function Talent() {
                     </div>
 
 
-                </div>
+                </motion.div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -5,18 +5,13 @@ import Contact from '../Components/Contact'
 import Talent from '../Components/Talent'
 import Footer from '../Components/Footer'
 import Discord from '../Components/Discord'
+import AutoScroll from '../Components/AutoScroll'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react'
 
 function Home() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        AOS.init({ duration: 2000 });
-    }, [])
+    
     return (
-        <div className="font-sans intro  h-max= bg-[url('./assets/bg-home.png')] bg-no-repeat bg-cover bg-center overflow-hidden ">
+        <div className="font-sans intro  h-max= bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
             <Event />
             <div className="md:container mx-auto md:px-4  text-white backdrop-blur-sm">
                 <About/>
@@ -25,6 +20,7 @@ function Home() {
             <Contact />
             <Footer />
             <Discord />
+            <AutoScroll />
         </div>
     )
 }

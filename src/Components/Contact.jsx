@@ -1,14 +1,13 @@
 import Logo from '../assets/logo.png'
-import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function Contact() {
     const menus = [
-        { name: "Intro" },
-        { name: "Home" },
-        { name: "Talent" },
-        { name: "About" },
-        { name: "News" },
-        { name: "Merch" },
+        { name: "Intro", src: "../" },
+        { name: "Home", src: "/home" },
+        { name: "Talent", src: "/talent" },
+        { name: "About", src: "/about" },
+        { name: "Merch", src: "/merch" },
     ]
 
     return (
@@ -28,9 +27,9 @@ function Contact() {
                             {menus.map((menu, index) => (
                                 <li className="duration-100 lg:pl-2 hover:bg-sky-300/40 hover:border-l-2 hover:border-l-white"
                                     key={index}>
-                                    <a className="h-12 flex items-center cursor-pointer decoration-transparent text-white text-lg border-transparent">
+                                    <Link to={menu.src} className="h-12 flex items-center cursor-pointer decoration-transparent text-white text-lg border-transparent">
                                         {menu.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
