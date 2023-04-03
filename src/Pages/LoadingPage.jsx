@@ -16,7 +16,6 @@ const LoadingPage = () => {
 
     return (
         <div className='h-screen w-full bg-slate-800 relative'>
-            {loading ? (
                 <div className='flex h-screen justify-center items-center'>
                     <div className='flex z-30 items-center justify-center'>
                         <img src={Logo} alt="" className=' w-28 max-md:w-20' />
@@ -44,10 +43,6 @@ const LoadingPage = () => {
                     </div>
 
                 </div>
-
-            ) : (
-                <div />
-            )}
         </div>
     );
 };

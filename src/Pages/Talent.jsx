@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TalentController from "../Components/Talent-controller";
 import { motion, useAnimationControls } from "framer-motion";
 import talents from '../Talents.json'
+import { Link } from "react-router-dom";
 
 
 const ImageVariant = {
@@ -34,6 +35,9 @@ const Talent = () => {
   const [isSocialMediaMode, setIsSocialMediaMode] = useState(false);
 
   const onClickHandler = () => {
+    if(isShowing) {
+      setIsSocialMediaMode(false);
+    }
     setIsShowing(!isShowing);
   }
 
@@ -45,19 +49,19 @@ const Talent = () => {
         </div>
           <motion.div initial={{visibility: 'none'}} animate={isShowing ? 'visible' : 'notVisible'} transition={{visibility: {duration: 1}}} variants={infoVariant} className="text-[#3B3BA5] absolute bottom-10 md:bottom-auto md:top-40 md:right-20 lg:right-32 xl:right-64 w-[80%] md:w-full max-w-[493px] bg-white h-fit text-center py-7 md:py-14 rounded-xl shadow-talentCard">
             <h2 className="text-xl md:text-5xl uppercase mb-4">{talent.name}</h2>
-            <div>
+            <div className="text-black text-lg">
               {
                 !isSocialMediaMode ?
               <>
-              <p>Tentang { talent.Nama }</p>
-              <button aria-label="social media detail handler" className="block text-inherit" onClick={() => setIsSocialMediaMode(true)}>Social Media</button>
-              <p>Merchandise</p>
+              <Link to={`/talent/${talent.Nama}`} className="block text-inherit text-center mx-auto no-underline hover:text-blue-500" >Tentang { talent.Nama }</Link>
+              <button aria-label="social media detail handler" className="block text-inherit text-center mx-auto my-4 hover:text-blue-500" onClick={() => setIsSocialMediaMode(true)}>Social Media</button>
+              <p className="hover:text-blue-500 cursor-pointer">Merchandise</p>
               </>
               :
               <>
-              <a href={talent.Instagram}>Instagram</a>
-              <a href={talent.Youtube}>youtube</a>
-              <a href={talent.Twitter}>Twitter</a>
+              <a className="block text-inherit no-underline" href={talent.Instagram}>Instagram</a>
+              <a className="block text-inherit no-underline my-4" href={talent.Youtube}>Youtube</a>
+              <a className="block text-inherit no-underline" href={talent.Twitter}>Twitter</a>
               </>
               }
             </div>
