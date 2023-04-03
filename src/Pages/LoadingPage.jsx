@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -7,15 +7,6 @@ import Logo from '../assets/logo.png';
 
 function LoadingPage() {
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setLoading(false);
-    //         navigate('/intro');
-    //     }, 10000);
-    // }, []);
-
 
     const ringAnimation  = `
     @keyframes ring  {

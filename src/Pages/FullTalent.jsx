@@ -1,10 +1,8 @@
-import RisuFullBody from "../assets/risu-full-body.webp"
-import RisuLogo from "../assets/Risu_Logo.webp"
 import talents from "../Talents.json";
 import {FaRegUserCircle} from 'react-icons/fa'
 import {MdDateRange} from 'react-icons/md'
 import {GiBodyHeight} from 'react-icons/gi'
-import { useLocation, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import LoadingPage from "./LoadingPage";
 

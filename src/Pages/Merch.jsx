@@ -1,5 +1,3 @@
-import Navbar1 from "../Components/Navbar";
-
 const Merch = () => {
   return (
     <>

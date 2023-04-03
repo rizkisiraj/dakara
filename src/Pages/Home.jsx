@@ -1,4 +1,3 @@
-import Navbar from '../Components/Navbar'
 import Event from '../Components/Event'
 import About from '../Components/About'
 import Contact from '../Components/Contact'
@@ -6,10 +5,15 @@ import Talent from '../Components/Talent'
 import Footer from '../Components/Footer'
 import Discord from '../Components/Discord'
 import AutoScroll from '../Components/AutoScroll'
+import { useEffect } from 'react'
 
 
 function Home() {
     
+    useEffect(() => {
+        window.scrollTo(0,0);
+    })
+
     return (
         <div className="font-sans intro  h-max= bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
             <Event />
