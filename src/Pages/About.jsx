@@ -18,8 +18,14 @@ import { SiFacebook } from "react-icons/si"
 
 import { Link } from "react-router-dom";
 import { motion }  from "framer-motion";
+import { useEffect } from 'react'
 
 function About() {
+
+    useEffect(() => {
+      window.scrollTo(0,0);
+    },[]);
+
     const imgStaff = [ 
         {staff: Staff1}, 
         {staff: Staff2}, 

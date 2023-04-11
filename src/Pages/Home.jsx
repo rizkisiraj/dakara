@@ -12,7 +12,7 @@ function Home() {
     
     useEffect(() => {
         window.scrollTo(0,0);
-    })
+    },[])
 
     return (
         <div className="font-sans intro bg-[url('./assets/bg-home.webp')] bg-no-repeat bg-cover bg-center overflow-hidden ">
