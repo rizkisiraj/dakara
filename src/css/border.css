@@ -1,5 +1,5 @@
 .border {
-    width: 200px;
+    width: 38rem;
     height: 200px;
     box-shadow: 16px 14px 20px #0000008c;
     border-radius: 10px;
@@ -19,21 +19,21 @@
     width: 150%;
     height: 150%;
     position: absolute;
-    animation: rotate 2s linear infinite;
+    animation: rotate 4s linear infinite;
 }
 .border::after{
-    content: "Animation";
-    width: 190px;
-    height: 190px;
+    content: "Dakara Live merupakan agensi entertaiment dari Indonesia yang bergerak dalam bidang Virtual Youtuber, kami bertujuan mengembangkan bakat dan minat talent untuk kualitas yang lebih baik, dan dapat menghibur untuk semua kalangan";
+    max-width: 38rem;
+    height: 160px;
+    margin-right: 5px;
+    margin-top: 5px;
     background: #101010;
     position: absolute;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff0052;
-    font-size: larger;
-    letter-spacing: 5px;
+    font-size: medium;
     box-shadow: inset 20px 20px 20px #0000008c;
 }
 @keyframes rotate {
@@ -41,6 +41,6 @@
         transform: rotate(0deg);
     }
     100%{
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }

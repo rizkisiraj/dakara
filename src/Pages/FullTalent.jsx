@@ -61,7 +61,7 @@ export default function FullTalent() {
                   }
                 </p>
               </div>
-              <div className="flex justify-end max-lg:justify-center max-lg:mx-auto w-[80%] text-[20px] max-xl:text-base max-sm:text-sm font-medium mt-5">
+              <div className="flex justify-center mx-auto w-[80%] text-[20px] max-xl:text-base max-sm:text-sm font-medium mt-5">
                 <table className="border-separate border-spacing-3">
                   <tbody>
                   <tr>

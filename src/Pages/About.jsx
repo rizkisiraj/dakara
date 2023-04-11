@@ -38,11 +38,13 @@ function About() {
                         animate = {{opacity : 1, y:0} }
                         transition={{duration : 1.5}}>
                         <h2 className=' text-5xl max-sm:text-4xl font-bold py-4'>Dakara ID</h2>
-                        <p className=" lg:px-16 py-4 px-4 font-normal text-lg  border-t-2 ">Dakara Live merupakan agensi entertaiment dari Indonesia yang
+                        <div className=" lg:px-16 py-3 px-3 font-normal text-lg before:top-0 before:left-0 before:border-r-[3px] relative before:absolute before:w-full before:h-[40px] before:border-t-[3px] before:border-white">
+                            Dakara Live merupakan agensi entertaiment dari Indonesia yang
                             bergerak dalam bidang Virtual Youtuber, kami bertujuan
                             mengembangkan bakat dan minat talent untuk kualitas
                             yang lebih baik, dan dapat menghibur
-                            untuk semua kalangan</p>
+                            untuk semua kalangan
+                        </div>
                     </motion.div>
                 </div>
 
