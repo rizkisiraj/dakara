@@ -53,7 +53,7 @@ export default function FullTalent() {
             </section>
 
             <section className=" w-full h-auto mx-auto bg-blue-50 rounded-t-[41px] py-[55px]">
-              <h1 className="text-6xl text-center font-bold mb-[40px] max-xl:text-4xl max-sm:text-2xl">ARIYA RISU</h1>
+              <h1 className="text-6xl text-center font-bold mb-[40px] max-xl:text-4xl max-sm:text-2xl">{talent.Nama}</h1>
               <div className="py-4 w-[80%] space-y-14 mx-auto after:bottom-0 after:right-0 after:border-r-4 after:absolute after:border-b-4 after:w-[143px] after:h-[143px] after:border-[#554184] before:top-0 before:left-0 before:border-l-4 relative before:absolute before:w-[143px] before:h-[143px] before:border-t-4 before:border-[#554184] text-[20px] max-xl:text-base max-sm:text-sm font-medium">
                 <p className=" text-left max-lg:text-center pl-14 lg:pr-40 max-lg:px-5">
                   {

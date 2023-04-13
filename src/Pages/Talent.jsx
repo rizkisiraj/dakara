@@ -48,7 +48,7 @@ const Talent = () => {
           <motion.img onClick={onClickHandler} key={talent.Nama} initial={{y: 500}} animate={isShowing ?  (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{y: {duration: .5}}} src={require(`../assets/${talent["Profile Setengah Badan"]}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
         </div>
           <motion.div initial={{visibility: 'none'}} animate={isShowing ? 'visible' : 'notVisible'} transition={{visibility: {duration: 1}}} variants={infoVariant} className="text-[#3B3BA5] absolute bottom-10 md:bottom-auto md:top-40 md:right-20 lg:right-32 xl:right-64 w-[80%] md:w-full max-w-[493px] bg-white h-fit text-center py-7 md:py-14 rounded-xl shadow-talentCard">
-            <h2 className="text-xl md:text-5xl uppercase mb-4">{talent.name}</h2>
+            <h2 className="text-xl md:text-5xl uppercase mb-4">{talent.Nama}</h2>
             <div className="text-black text-lg">
               {
                 !isSocialMediaMode ?

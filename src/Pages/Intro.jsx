@@ -8,7 +8,7 @@ function Intro() {
     const navigate = useNavigate()
     return (
         <div className="font-sans max-w-screen h-fit max-md:h-screen">
-            <div className="w-full h-screen bg-black flex items-center">
+            <div className="w-full xl:h-screen bg-black flex items-center">
                 <video className="w-screen xl:h-screen max-xl:aspect-video object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay loop >
                     <source src={MyVideo} type="video/webm" />
                     Your browser does not support HTML5 video.
