@@ -43,7 +43,6 @@ function Talent() {
                                 src={require(`../assets/${item.GambarIntro}`)}
                                 alt="talent"
                                 className={`w-full object-cover object-top brightness-95`}
-
                             />
                             <div onClick={() => {
                                 setTalent(talents[index]);
@@ -59,7 +58,7 @@ function Talent() {
                 </Carousel>
 
                 {/* Profil Singkat */}
-                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center pl-5 pr-10 max-md:pr-5 py-20 max-lg:py-12 max-md:py-6 top-0 z-20 w-full border-[2px] h-full max-md:h-fit rounded-xl duration-1000 bg-[url('./assets/bg-ariya.png')] bg-cover bg-center`}
+                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center pl-5 pr-10 max-md:pr-5 py-20 max-lg:py-12 max-md:py-6 top-0 z-20 w-full border-[1px] h-full max-md:h-fit rounded-lg duration-1000 bg-gradient-to-l from-[#6E347A] to-[#305581] bg-cover bg-center shadow-button`}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.5 }} >
@@ -67,23 +66,25 @@ function Talent() {
                         <span className='m-auto'><AiOutlineClose size={25} className='text-white' /></span>
                     </button>
 
-                    <div className=" w-1/3 h-full max-md:h-2/3 max-md:w-full flex items-center justify-center backdrop-blur-[4px]">
+                    <div className=" w-1/3 h-full max-md:h-2/3 max-md:w-full flex items-center justify-center">
                         <img src={require(`../assets/${talent.Profile}`)} alt={talent.Nama} className='mx-auto w-72 max-md:w-28 items-center' />
                     </div>
 
-                    <div className="flex flex-col relative w-2/3 max-md:w-full h-full pl-4 max-md:my-2 lg:text-lg max-lg:text-md justify-between text-[#3B3BA5] font-medium backdrop-blur-[4px]">
+                    <div className="flex flex-col relative w-2/3 max-md:w-full h-full px-4 max-md:my-2 lg:text-lg max-lg:text-md justify-between text-white font-medium">
+
+                        <h2 className='lg:text-4xl max-lg:text-2xl max-md:text-xl uppercase text-center font-semibold'>{talent.Nama}</h2>
                         <div>
-                            <h2 className='lg:text-4xl max-lg:text-2xl max-md:text-xl uppercase text-center font-semibold mb-3'>{talent.Nama}</h2>
-                            <p className=' mb-3 max-md:text-center max-md:text-sm max-md:mb-1'>{talent['Profile Singkat']}</p>
+                            <p className=' mb-3 max-md:mb-0 max-md:text-center max-md:text-sm'>{talent['Profile Singkat']}</p>
+                            <ul className='max-md:text-center max-md:text-sm pl-0 mt-12 max-md:my-6'>
+                                <li>Ras : {talent.Ras}</li>
+                                <li>Ulang Tahun : {talent['Ulang Tahun']}</li>
+                                <li>Tinggi : {talent.Tinggi}</li>
+                            </ul>
                         </div>
-                        <ul className='max-md:mx-auto max-md:text-sm pl-0 mb-8 max-md:mb-6'>
-                            <li>Ras : {talent.Ras}</li>
-                            <li>Ulang Tahun : {talent['Ulang Tahun']}</li>
-                            <li>Tinggi : {talent.Tinggi}</li>
-                        </ul>
-                        <button onClick={() => navigate('/talent')} className='w-40 relative md:absolute bottom-0 right-0 mx-auto h-auto py-2 px-4 mt-8 max-md:mt-0 bg-[#1DB3E2] hover:bg-[#20a0c7] text-white rounded-xl max-md:rounded-md border-white border-2 font-semibold text-md max-md:text-sm shadow-button'>
+                        <button onClick={() => navigate('/talent')} className='w-40 self-end max-md:self-center h-auto py-2 px-4  bg-[#1DB3E2] hover:bg-[#20a0c7] text-white rounded-xl max-md:rounded-md border-white border-2 font-semibold text-md max-md:text-sm shadow-button'>
                             <span style={{ textShadow: '0px 2px 2px rgb(47 79 79) ' }}>Lebih Detail</span>
                         </button>
+
                     </div>
 
 

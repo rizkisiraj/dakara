@@ -31,14 +31,14 @@ export default function FullTalent() {
     {
       isLoading ? <LoadingPage /> :
     
-      <main className="font-sans w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover bg-top bg-fixed">
+      <main className="font-sans w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover max-md:bg-auto bg-top max-md:bg-center bg-fixed">
         <div className=" flex flex-col w-full">
-          <div className=" w-[30%] max-lg:w-1/3  max-md:w-2/3 mx-auto mt-40">
+          <div className=" w-[30rem] max-sm:w-[24rem] mx-auto mt-40">
             <img className="w-full" src={require(`../assets/${talent["Profile Full Body"]}`)} alt="karakter" />
           </div>
 
           <div className=" w-[30%] aspect-[3/1] max-lg:w-1/3 max-md:w-2/3 mx-auto  bg-white rounded-xl mt-20 relative shadow-talentLogo">
-            <div class="absolute inset-0 flex items-center justify-center px-4"> 
+            <div className="absolute inset-0 flex items-center justify-center px-4"> 
               <img className=" w-full " src={require(`../assets/${talent.Logo}`)} alt="logo" />
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function FullTalent() {
                   }
                 </p>
               </div>
-              <div className="flex justify-center mx-auto w-[80%] text-[20px] max-xl:text-base max-sm:text-sm font-medium mt-5">
+              <div className="flex justify-center mx-auto w-[80%] text-[20px] max-xl:text-base max-sm:text-xs font-medium mt-5">
                 <table className="border-separate border-spacing-3">
                   <tbody>
                   <tr>

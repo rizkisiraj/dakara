@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import Logo from '../assets/logo.png';
@@ -31,7 +30,7 @@ function LoadingPage() {
 
 
     return (
-        <div className='h-screen w-full bg-slate-800 relative overflow-hidden'>
+        <div className="h-screen w-full bg-[url('./assets/bg-loading.png')] relative overflow-hidden">
             {loading ? (
                 <div className='flex h-screen justify-center items-center'>
                     <div className=' absolute w-64 h-64 rounded-full before:content-none animate-ring'></div>
