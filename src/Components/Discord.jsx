@@ -12,14 +12,14 @@ function Discord() {
 
     return (
         <div className="absolute z-50">
-            <div className={`${close ? 'flex' : 'hidden'} fixed flex w-16 h-16 bg-white bottom-1/2 left-5 rounded-full animate-bounce`}>
+            <div className={`${close ? 'flex' : 'hidden'} fixed flex w-16 h-16 max-md:w-12 max-md:h-12 bg-white bottom-1/2 left-5 rounded-full animate-bounce`}>
                 <div className="absolute flex w-6 h-6 bg-slate-700 -top-1.5 -right-1.5 rounded-full border-2 border-white" 
                 onClick={() => setClose(false)}>
-                    <button><span className='m-auto'><AiOutlineClose size={20} style={{ color: 'white' }} /></span></button>
+                    <button><span className='m-auto'><AiOutlineClose className="text-white text-[20px]"/></span></button>
                 </div>
                 <button className="m-auto h-full w-full rounded-full"
                     onClick={() => {setOpen(!open); setClose(false);}}>
-                    <FaDiscord size={50} className=' m-auto' style={{ color: '#5865F2' }} /></button>
+                    <FaDiscord className='m-auto text-[#5865F2] text-[50px] max-md:text-4xl' /></button>
             </div>
             <div className={`${open ? 'flex' : 'hidden'} w-[378px] h-[294px] max-sm:w-[318px] max-sm:h-[234px] max-[356px]:w-[240px]  max-[356px]:h-[174px] rounded-lg bg-white fixed flex-col px-4 max-[356px]:px-1" items-center justify-center text-center bottom-1/4 left-5 `}>
                 <h2 className=" text-2xl font-bold m-0 max-md:text-xl max-[356px]:text-base">DISCORD</h2>

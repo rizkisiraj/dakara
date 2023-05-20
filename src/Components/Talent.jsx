@@ -24,7 +24,7 @@ function Talent() {
     const navigate = useNavigate()
 
     return (
-        <motion.div className="flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen max-md:my-40 mx-auto items-center relative"
+        <motion.div className={`flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen mx-auto items-center relative ${open ? 'max-md:mb-56' : 'max-md:mb-28'}`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2 }}>
@@ -59,28 +59,31 @@ function Talent() {
                 </Carousel>
 
                 {/* Profil Singkat */}
-                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center top-0 z-20 w-full border-[2px] h-full max-md:min-h-[400px] rounded-xl duration-1000 bg-gradient-to-b  from-[#512275] to-[#3B3BA5]`}
+                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center pl-5 pr-10 max-md:pr-5 py-20 max-lg:py-12 max-md:py-6 top-0 z-20 w-full border-[2px] h-full max-md:h-fit rounded-xl duration-1000 bg-[url('./assets/bg-ariya.png')] bg-cover bg-center`}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.5 }} >
-                    <div className="absolute w-10 h-10 rounded-full -right-5 -top-5 max-md:right-1 max-md:top-1 bg-white/50 flex" onClick={() => setOpen(!open)}>
-                        <span className='m-auto'><AiOutlineClose size={20} /></span>
+                    <button className="absolute z-20 w-10 h-10 rounded-full -right-5 -top-5 max-md:right-1 max-md:top-1 bg-[#1DB3E2] hover:bg-[#20a0c7] border-2 border-white flex" onClick={() => setOpen(!open)}>
+                        <span className='m-auto'><AiOutlineClose size={25} className='text-white' /></span>
+                    </button>
+
+                    <div className=" w-1/3 h-full max-md:h-2/3 max-md:w-full flex items-center justify-center backdrop-blur-[4px]">
+                        <img src={require(`../assets/${talent.Profile}`)} alt={talent.Nama} className='mx-auto w-72 max-md:w-28 items-center' />
                     </div>
-                    <div className=" w-1/3 h-full max-md:h-2/3 max-md:w-full flex items-center justify-center">
-                        <img src={require(`../assets/${talent.Profile}`)} alt={talent.Nama} className='mx-auto w-72 max-md:w-36 items-center' />
-                    </div>
-                    <div className="flex flex-col w-2/3 max-md:w-full h-full px-3 lg:py-5 max-md:my-2 justify-center lg:text-lg max-lg:text-md">
-                        <h2 className='lg:text-4xl max-lg:text-2xl max-md:text-xl uppercase text-center font-semibold'>{talent.Nama}</h2>
-                        <p className='lg:mt-4 mb-3 max-md:text-center max-md:text-sm max-md:mb-1'>{talent['Profile Singkat']}</p>
-                        <ul className='max-md:mx-auto max-md:text-sm pl-0'>
+
+                    <div className="flex flex-col relative w-2/3 max-md:w-full h-full pl-4 max-md:my-2 lg:text-lg max-lg:text-md justify-between text-[#3B3BA5] font-medium backdrop-blur-[4px]">
+                        <div>
+                            <h2 className='lg:text-4xl max-lg:text-2xl max-md:text-xl uppercase text-center font-semibold mb-3'>{talent.Nama}</h2>
+                            <p className=' mb-3 max-md:text-center max-md:text-sm max-md:mb-1'>{talent['Profile Singkat']}</p>
+                        </div>
+                        <ul className='max-md:mx-auto max-md:text-sm pl-0 mb-8 max-md:mb-6'>
                             <li>Ras : {talent.Ras}</li>
                             <li>Ulang Tahun : {talent['Ulang Tahun']}</li>
                             <li>Tinggi : {talent.Tinggi}</li>
                         </ul>
-                        <button onClick={() => navigate('/talent')} className='w-40 mx-auto h-auto py-1.5 px-4 mt-8 max-md:mt-0  bg-white/50 hover:bg-white/30 rounded-xl max-md:rounded-md border-white border-2 font-semibold text-md max-md:text-sm shadow-blue-800 shadow-2xl'>
+                        <button onClick={() => navigate('/talent')} className='w-40 relative md:absolute bottom-0 right-0 mx-auto h-auto py-2 px-4 mt-8 max-md:mt-0 bg-[#1DB3E2] hover:bg-[#20a0c7] text-white rounded-xl max-md:rounded-md border-white border-2 font-semibold text-md max-md:text-sm shadow-button'>
                             <span style={{ textShadow: '0px 2px 2px rgb(47 79 79) ' }}>Lebih Detail</span>
                         </button>
-
                     </div>
 
 

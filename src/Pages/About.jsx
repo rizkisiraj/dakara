@@ -18,8 +18,14 @@ import { SiFacebook } from "react-icons/si"
 
 import { Link } from "react-router-dom";
 import { motion }  from "framer-motion";
+import { useEffect } from 'react'
 
 function About() {
+
+    useEffect(() => {
+      window.scrollTo(0,0);
+    },[]);
+
     const imgStaff = [ 
         {staff: Staff1}, 
         {staff: Staff2}, 
@@ -129,11 +135,11 @@ function About() {
             <div className=' h-[600px] text-white  w-full flex flex-col items-center bg-white/5 mt-32'>
                 <h2 className='py-16 text-[40px] max-md:text-3xl text-center'>Connect to Us</h2>
                 <div className=' w-2/3 grid justify-items-center grid-cols-5 md:gap-8 h-[300px] md:px-10 max-sm:w-full max-md:px-5 max-md:gap-2 text-center font-semibold '>
-                    <div className="col-start-1 col-end-2 h-full rounded-md relative"><Link to='https://twitter.com/DakaraLive' target="_blank" className="text-white no-underline "><IoLogoTwitter className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Twitter</span></Link></div>
-                    <div className="col-start-3 col-end-4 h-full rounded-md relative"><Link to='https://discord.gg/nJBCre7tmt' target="_blank" className="text-white no-underline "><SiDiscord className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Discord</span></Link></div>
-                    <div className="col-start-5 col-end-6 h-full rounded-md relative"><Link to='https://www.youtube.com/@DakaraLiveEntertainment' target="_blank" className="text-white no-underline "><IoLogoYoutube className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Youtube</span></Link></div>
-                    <div className="col-start-2 col-end-3 h-full rounded-md relative"><Link to='https://www.facebook.com/profile.php?id=100075887293085' target="_blank" className="text-white no-underline "><SiFacebook className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Facebook</span></Link></div>
-                    <div className="col-start-4 col-end-5 h-full rounded-md relative"><Link to='https://www.instagram.com/dakaralive/' target="_blank" className="text-white no-underline "><AiFillInstagram className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Instagram</span></Link></div>
+                    <div className="col-start-1 col-end-2 h-full rounded-md relative"><Link to='https://twitter.com/DakaraLive' target="_blank" className="text-[#ffffff] no-underline hover:text-[#EFC3F6]"><IoLogoTwitter className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Twitter</span></Link></div>
+                    <div className="col-start-3 col-end-4 h-full rounded-md relative"><Link to='https://discord.gg/nJBCre7tmt' target="_blank" className="text-[#ffffff] no-underline hover:text-[#EFC3F6]"><SiDiscord className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Discord</span></Link></div>
+                    <div className="col-start-5 col-end-6 h-full rounded-md relative"><Link to='https://www.youtube.com/@DakaraLiveEntertainment' target="_blank" className="text-[#ffffff] no-underline hover:text-[#EFC3F6]"><IoLogoYoutube className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Youtube</span></Link></div>
+                    <div className="col-start-2 col-end-3 h-full rounded-md relative"><Link to='https://www.facebook.com/profile.php?id=100075887293085' target="_blank" className="text-[#ffffff] no-underline hover:text-[#EFC3F6]"><SiFacebook className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Facebook</span></Link></div>
+                    <div className="col-start-4 col-end-5 h-full rounded-md relative"><Link to='https://www.instagram.com/dakaralive/' target="_blank" className="text-[#ffffff] no-underline hover:text-[#EFC3F6]"><AiFillInstagram className='w-[64px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-lg max-sm:text-base'>Instagram</span></Link></div>
                 </div>
             </div>
 

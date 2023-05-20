@@ -6,6 +6,9 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import LoadingPage from "./LoadingPage";
 
+import Ariya1 from "../assets/ris_1.png";
+import Ariya2 from "../assets/ris_2.png";
+import Ariya3 from "../assets/ris_3.png";
 
 
 export default function FullTalent() {
@@ -34,30 +37,37 @@ export default function FullTalent() {
             <img className="w-full" src={require(`../assets/${talent["Profile Full Body"]}`)} alt="karakter" />
           </div>
 
-          <div className=" w-[30%] max-lg:w-1/3 max-md:w-2/3 mx-auto  bg-white rounded-xl px-7">
-            <img className="w-full aspect-[7/3]" src={require(`../assets/${talent.Logo}`)} alt="logo" />
+          <div className=" w-[30%] aspect-[3/1] max-lg:w-1/3 max-md:w-2/3 mx-auto  bg-white rounded-xl mt-20 relative shadow-talentLogo">
+            <div class="absolute inset-0 flex items-center justify-center px-4"> 
+              <img className=" w-full " src={require(`../assets/${talent.Logo}`)} alt="logo" />
+            </div>
           </div>
         </div>
 
         <div className=" flex flex-col w-full  px-40 max-lg:px-20 max-md:px-10">
             <section className="w-full flex justify-around max-md:justify-between px-20 max-md:px-0 my-52 max-md:my-20">
-              <div className="w-[23%] max-lg:w-[30%] aspect-[5/6] bg-slate-400 rounded-md">
-
+              <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
+                <img src={Ariya1} alt="" className="w-full object-cover" />
               </div>
-              <div className="w-[23%] max-lg:w-[30%] aspect-[5/6] bg-slate-400 rounded-md">
-
+              <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
+                <img src={Ariya2} alt="" className="w-full object-cover" />
               </div>
-              <div className="w-[23%] max-lg:w-[30%] aspect-[5/6] bg-slate-400 rounded-md">
-
+              <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
+                <img src={Ariya3} alt="" className="w-full object-cover" />
               </div>
             </section>
 
             <section className=" w-full h-auto mx-auto bg-blue-50 rounded-t-[41px] py-[55px]">
-              <h1 className="text-6xl text-center font-bold mb-[40px] max-xl:text-4xl max-sm:text-2xl">ARIYA RISU</h1>
+              <h1 className="text-6xl text-center font-bold mb-[40px] max-xl:text-4xl max-sm:text-2xl">{talent.Nama}</h1>
               <div className="py-4 w-[80%] space-y-14 mx-auto after:bottom-0 after:right-0 after:border-r-4 after:absolute after:border-b-4 after:w-[143px] after:h-[143px] after:border-[#554184] before:top-0 before:left-0 before:border-l-4 relative before:absolute before:w-[143px] before:h-[143px] before:border-t-4 before:border-[#554184] text-[20px] max-xl:text-base max-sm:text-sm font-medium">
-                <p className=" text-left max-lg:text-center pl-14 lg:pr-40 max-lg:px-5">
+                <p className=" text-left pl-14 lg:pr-40 max-lg:px-5">
                   {
-                    talent["Profile Singkat"]
+                    talent["Profil Lengkap Paragraf1"]
+                  }
+                </p>
+                <p className=" text-right pr-14 lg:pl-40 max-lg:px-5">
+                  {
+                    talent["Profil Lengkap Paragraf2"]
                   }
                 </p>
               </div>
