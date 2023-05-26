@@ -6,11 +6,6 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import LoadingPage from "./LoadingPage";
 
-import Ariya1 from "../assets/ris_1.png";
-import Ariya2 from "../assets/ris_2.png";
-import Ariya3 from "../assets/ris_3.png";
-
-
 export default function FullTalent() {
 
   const { id } = useParams();
@@ -33,11 +28,11 @@ export default function FullTalent() {
     
       <main className="font-sans w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover max-md:bg-auto bg-top max-md:bg-center bg-fixed">
         <div className=" flex flex-col w-full">
-          <div className=" w-[30rem] max-sm:w-[24rem] mx-auto mt-40">
+          <div className=" w-[18rem] max-sm:w-[12rem] mx-auto mt-40">
             <img className="w-full" src={require(`../assets/${talent["Profile Full Body"]}`)} alt="karakter" />
           </div>
 
-          <div className=" w-[30%] aspect-[3/1] max-lg:w-1/3 max-md:w-2/3 mx-auto  bg-white rounded-xl mt-20 relative shadow-talentLogo">
+          <div className=" w-[30%] aspect-[3/1] max-lg:w-1/3 max-md:w-2/3 mx-auto  bg-white rounded-xl mt-10 relative shadow-talentLogo">
             <div className="absolute inset-0 flex items-center justify-center px-4"> 
               <img className=" w-full " src={require(`../assets/${talent.Logo}`)} alt="logo" />
             </div>
@@ -47,13 +42,13 @@ export default function FullTalent() {
         <div className=" flex flex-col w-full  px-40 max-lg:px-20 max-md:px-10">
             <section className="w-full flex justify-around max-md:justify-between px-20 max-md:px-0 my-52 max-md:my-20">
               <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
-                <img src={Ariya1} alt="" className="w-full object-cover" />
+                <img src={require(`../assets/${talent["Mini Profil Talent1"]}`)} alt="" className="w-full object-cover" />
               </div>
               <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
-                <img src={Ariya2} alt="" className="w-full object-cover" />
+                <img src={require(`../assets/${talent["Mini Profil Talent2"]}`)} alt="" className="w-full object-cover" />
               </div>
               <div className="w-[20%] max-lg:w-[30%] aspect-[5/6] rounded-md">
-                <img src={Ariya3} alt="" className="w-full object-cover" />
+                <img src={require(`../assets/${talent["Mini Profil Talent3"]}`)} alt="" className="w-full object-cover" />
               </div>
             </section>
 
