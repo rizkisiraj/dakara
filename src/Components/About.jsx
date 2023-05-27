@@ -38,7 +38,7 @@ function About() {
         </div>
         
         <div>
-          <button className=' h-14 w-48 py-1.5 mt-7 bg-white/50 hover:bg-white/30 rounded-xl border-white border-2 font-semibold text-md shadow-md shadow-blue-500/50'
+          <button className=' h-14 w-48 py-1.5 mt-7 bg-white/40 hover:bg-white/30 rounded-xl border-white border-2 font-semibold text-md shadow-talentLogo'
             onClick={() => navigate('/about')} >
             <span className='text-center text-lg'>Selengkapnya</span>
           </button>
