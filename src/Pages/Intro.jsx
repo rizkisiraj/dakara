@@ -9,9 +9,8 @@ function Intro() {
     return (
         <div className="font-sans max-w-screen h-fit max-md:h-screen">
             <div className="w-full xl:h-screen bg-black flex items-center">
-                <video className="w-screen xl:h-screen max-xl:aspect-video object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay loop >
+                <video className="w-screen xl:h-screen max-xl:aspect-video object-cover object-center" muted={true} autoPlay loop >
                     <source src={MyVideo} type="video/webm" />
-                    Your browser does not support HTML5 video.
                 </video>
             </div>
             <div className="bg-[url('./assets/bg-journey.webp')] bg-cover lg:h-screen max-lg:h-[50vh] w-full flex justify-center items-center">

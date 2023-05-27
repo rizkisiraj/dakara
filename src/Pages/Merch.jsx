@@ -17,7 +17,7 @@ function Merch() {
                         <div className='flex justify-between items-center mb-2 mt-3'>
                             <span className=' text-lg max-md:text-base max-sm:text-xs font-semibold bg-[#9625A8] py-0.5  px-3 max-sm:px-1 rounded-full '>{merch.Kategori}</span>
                         </div>
-                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'>{merch.Nama}</p>
+                        <p className=' text-xl max-md:text-lg max-sm:text-sm font-semibold'><a className='no-underline' href={merch.Link}>{merch.Nama}</a></p>
                     </div>
                 </div>)
                 }
