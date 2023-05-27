@@ -4,12 +4,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
 function Intro() {
-    const [muted, setMuted] = useState(false);
+    const [muted, setMuted] = useState(true);
     const navigate = useNavigate()
     return (
         <div className="font-sans max-w-screen h-fit max-md:h-screen">
             <div className="w-full xl:h-screen bg-black flex items-center">
-                <video className="w-screen xl:h-screen max-xl:aspect-video object-cover object-center" muted={muted} onClick={() => setMuted(!muted)} autoPlay loop >
+                <video className="w-screen xl:h-screen max-xl:aspect-video object-cover object-center" muted={true} autoPlay loop >
                     <source src={MyVideo} type="video/webm" />
                 </video>
             </div>
