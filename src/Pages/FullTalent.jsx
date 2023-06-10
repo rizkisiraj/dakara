@@ -42,15 +42,15 @@ export default function FullTalent() {
                 <img className="w-full" src={require(`../assets/${talent["Profile Full Body"]}`)} alt="karakter" />
               </div>
 
-              <div className=" w-[55vh] aspect-[3/1] max-lg:w-[50vh] max-[400px]:w-[38vh] mx-auto  bg-white rounded-xl mt-10 relative shadow-talentLogo">
+              <div className=" w-[55vh] aspect-[3/1] max-lg:w-[50vh] max-md:w-[40vh] max-[400px]:w-[35vh] mx-auto  bg-white rounded-xl mt-10 relative shadow-talentLogo">
                 <div className="absolute inset-0 flex items-center justify-center px-4">
                   <img className=" w-full " src={require(`../assets/${talent.Logo}`)} alt="logo" />
                 </div>
               </div>
             </div>
 
-            <div className=" flex flex-col w-full  px-40 max-lg:px-16 max-md:px-10">
-              <section className="w-full flex justify-around max-md:justify-between px-10 max-md:px-0 my-52 max-md:my-20 max-sm:space-x-2">
+            <div className=" flex flex-col flex-wrap w-full  px-40 max-lg:px-16 max-md:px-10">
+              <section className="w-full flex justify-around max-md:justify-between px-10 max-md:px-0 my-52 max-md:my-20 space-x-2">
                 <div className="w-[25vh] max-lg:w-[23vh] max-sm:w-[18vh] aspect-[5/6] rounded-md">
                   <img src={require(`../assets/${talent["Mini Profil Talent1"]}`)} alt="" className="w-full object-cover" />
                 </div>
@@ -101,9 +101,9 @@ export default function FullTalent() {
                   </table>
                 </div>
                 <div className="flex items-center justify-center space-x-14 max-md:space-x-2 max-sm:space-x-1 mt-10">
-                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to='https://twitter.com/DakaraLive' target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><IoLogoTwitter className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Twitter</span></Link></div>
-                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to='https://www.instagram.com/dakaralive/' target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><AiFillInstagram className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Instagram</span></Link></div>
-                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to='https://www.youtube.com/@DakaraLiveEntertainment' target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><IoLogoYoutube className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Youtube</span></Link></div>
+                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to={talent.Twitter} target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><IoLogoTwitter className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Twitter</span></Link></div>
+                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to={talent.Instagram} target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><AiFillInstagram className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Instagram</span></Link></div>
+                  <div className="h-full w-28 max-md:w-24 text-center rounded-md relative"><Link to={talent.Youtube} target="_blank" className="text-[#000] no-underline hover:text-[#3B3BA5]"><IoLogoYoutube className='w-[50px] h-auto max-md:w-12 max-sm:w-10 mx-auto' /><span className='text-xl max-md:text-base max-sm:text-sm'>Youtube</span></Link></div>
                 </div>
               </section>
             </div>
