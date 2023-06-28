@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import { useState } from 'react';
 import talents from "../Talents.json"
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function Talent() {
@@ -18,7 +18,6 @@ function Talent() {
             slidesToSlide: 3
         }
     };
-
     const [open, setOpen] = useState(false);
     const [talent, setTalent] = useState(talents[0]);
     const navigate = useNavigate()

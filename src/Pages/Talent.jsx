@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TalentController from "../Components/Talent-controller";
 import { motion, useAnimationControls } from "framer-motion";
 import talents from '../Talents.json'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { MdKeyboardBackspace } from "react-icons/md";
@@ -19,6 +19,7 @@ const infoVariant = {
 }
 
 const Talent = () => {
+  const location = useLocation();
   useEffect(() => {
     window.matchMedia('(max-width: 640px)').addEventListener('change', e => {
       setSmallScreen(e.matches);
@@ -29,7 +30,12 @@ const Talent = () => {
   useEffect(() => {
     const smallScreen = window.matchMedia('(max-width: 640px)').matches;
     setSmallScreen(smallScreen);
-  }, [])
+
+    if(location.state) {
+      setTalent(location.state.talent);
+      setIsShowing(true);
+    }
+  }, [location.state])
 
   const [talent, setTalent] = useState(talents[0]);
   const [isShowing, setIsShowing] = useState(false);

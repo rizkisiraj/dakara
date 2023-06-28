@@ -2,7 +2,7 @@ import talents from "../Talents.json";
 import { FaRegUserCircle } from 'react-icons/fa'
 import { MdDateRange } from 'react-icons/md'
 import { GiBodyHeight } from 'react-icons/gi'
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import LoadingPage from "./LoadingPage";
 import { Link } from "react-router-dom";
@@ -15,6 +15,7 @@ import { MdKeyboardBackspace } from "react-icons/md"
 export default function FullTalent() {
 
   const { id } = useParams();
+  const navigate = useNavigate();
   const [talent, setTalent] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -34,7 +35,11 @@ export default function FullTalent() {
 
           <main className="relative font-sans w-full h-auto aspect-[16/11] bg-[url('./assets/bg-full-talent.webp')] bg-cover max-md:bg-auto bg-top max-md:bg-center bg-fixed">
             <div className={` flex h-6 bg-transparent top-24 left-14 max-sm:left-4 absolute`} >
-              <button><span className='m-auto flex items-center text-[#fff] hover:text-[#EFC3F6] text-lg font-semibold max-sm:text-base'><MdKeyboardBackspace className="text-[30px] max-sm:text[25px] mr-4 max-sm:mr-2" /> Back to Talent </span></button>
+              <button onClick={()=> {
+                navigate('/talent',{state:{talent: talent, isActive: true}});
+              }}>
+                <span className='m-auto flex items-center text-[#fff] hover:text-[#EFC3F6] text-lg font-semibold max-sm:text-base'><MdKeyboardBackspace className="text-[30px] max-sm:text[25px] mr-4 max-sm:mr-2" /> Back to Talent </span>
+                </button>
             </div>
 
             <div className=" flex flex-col w-full">
