@@ -24,7 +24,7 @@ function Talent() {
     const navigate = useNavigate()
 
     return (
-        <motion.div className={`flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen mx-auto items-center relative ${open ? 'max-md:mb-56' : 'max-md:mb-28'}`}
+        <motion.div className={`flex flex-col md:h-screen  lg:max-w-5xl max-w-5xl max-md:max-w-screen mx-auto items-center relative ${open ? 'max-md:mb-72' : 'max-md:mb-28'}`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2 }}>
@@ -58,7 +58,7 @@ function Talent() {
                 </Carousel>
 
                 {/* Profil Singkat */}
-                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center pl-5 pr-10 max-md:pr-5 py-20 max-lg:py-12 max-md:py-6 top-0 z-20 w-full border-[1px] h-full max-md:h-fit rounded-lg duration-1000 bg-gradient-to-l from-[#6E347A] to-[#305581] bg-cover bg-center shadow-button`}
+                <motion.div className={`${open ? 'block' : 'hidden'} flex absolute max-md:flex-col max-md:items-center pl-5 pr-10 max-md:pr-5 py-20 max-lg:py-12 max-md:py-6 top-0 z-20 w-full border-[1px] h-full max-md:h-auto rounded-lg duration-1000 bg-gradient-to-l from-[#6E347A] to-[#305581] bg-cover bg-center shadow-button`}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.5 }} >

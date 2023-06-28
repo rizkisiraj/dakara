@@ -3,8 +3,9 @@ import TalentController from "../Components/Talent-controller";
 import { motion, useAnimationControls } from "framer-motion";
 import talents from '../Talents.json'
 import { Link } from "react-router-dom";
-import { AiOutlineClose } from "react-icons/ai";
 
+import { AiOutlineClose } from "react-icons/ai";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 const ImageVariant = {
   initial: { y: 0, x: 0 },
@@ -49,8 +50,11 @@ const Talent = () => {
           <motion.img onClick={onClickHandler} key={talent.Nama} initial={{ y: 500 }} animate={isShowing ? (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{ y: { duration: .5 } }} src={require(`../assets/${talent["Profile Setengah Badan"]}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
         </div>
         <motion.div initial={{ visibility: 'none' }} animate={isShowing ? 'visible' : 'notVisible'} transition={{ visibility: { duration: 1 } }} variants={infoVariant} className="text-white absolute bottom-10 md:bottom-auto md:top-40 md:right-20 lg:right-32 xl:right-64 w-[80%] md:w-full max-w-[493px] bg-gradient-to-b from-[#3B3BA5]/70 to-[#9625A8]/70 h-fit text-center py-7 px-10 md:px-20 md:py-14 rounded-xl shadow-talentCard">
-          <div className="absolute flex w-6 h-6 bg-transparent top-2 right-2" onClick={() => {setIsShowing(!isShowing); setIsSocialMediaMode(false)}}>
-            <button><span className='m-auto'><AiOutlineClose size={22} className="hover:text-[#EFC3F6]"/></span></button>
+          <div className="absolute flex w-6 h-6 bg-transparent top-2 right-2" onClick={() => { setIsShowing(!isShowing); setIsSocialMediaMode(false) }}>
+            <button><span className='m-auto'><AiOutlineClose size={22} className="hover:text-[#EFC3F6]" /></span></button>
+          </div>
+          <div className={`absolute ${isSocialMediaMode ? 'flex' : 'hidden'} w-6 h-6 bg-transparent top-2 left-2`} onClick={() => { setIsSocialMediaMode(false) }}>
+            <button><span className='m-auto'><MdKeyboardBackspace size={35} className="hover:text-[#EFC3F6]" /></span></button>
           </div>
           <h2 className="text-xl md:text-4xl uppercase mb-4">{talent.Nama}</h2>
           <div className="text-white text-lg md:text-xl before:top-0 py-4 before:left-0 before:border-r-[3px] relative before:absolute before:w-full before:h-[30px] before:border-t-[3px] before:border-white">
