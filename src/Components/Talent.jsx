@@ -49,7 +49,7 @@ function Talent() {
                             }} className="absolute inset-0 bg-gradient-to-b from-transparent group-hover:from-black/20 group-hover:via-black/50 group-hover:to-black/80"></div>
                             <div className=' absolute group-hover:block bottom-7 left-6 max-md:text-center max-md:left-1/2 max-md:-translate-x-1/2 translate-y-[200%] group-hover:translate-y-0 transition-all duration-500'>
                                 <span className='lg:text-xl max-md:text-md font-bold uppercase block'>{item.Nama}</span>
-                                <span className='lg:text-md max-md:text-sm font-light'>Gen 1 Talent</span>
+                                <span className='lg:text-md max-md:text-sm font-light'>Gen {item.Gen} Talent</span>
                             </div>
 
                         </div>

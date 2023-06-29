@@ -27,10 +27,10 @@ function About() {
     },[]);
 
     const imgStaff = [ 
-        {staff: Staff1}, 
-        {staff: Staff2}, 
-        {staff: Staff3}, 
-        {staff: Staff4} 
+        {staff: Staff1, role: "owner"}, 
+        {staff: Staff2, role: "editor"}, 
+        {staff: Staff3, role: "design graphic"}, 
+        {staff: Staff4, role: "manager"} 
     ];
 
     return (
@@ -123,7 +123,7 @@ function About() {
                         {imgStaff.map((item, index) => (
                             <div className="col-span-2 w-full aspect-[5/6] rounded-md relative" key={index}>
                                 <img src={item.staff} alt="" className=' object-cover rounded-md' />
-                                <div className="absolute object-cover inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 rounded-md "></div>
+                                <div className="absolute object-cover inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 rounded-md flex items-end justify-center text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base font-medium "> <p className=' text-uppercase text-center mb-2 px-2'>{item.role}</p></div>
                             </div>
                         ))}
                     </motion.div>
