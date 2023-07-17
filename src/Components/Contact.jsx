@@ -2,6 +2,7 @@ import Logo from '../assets/logo.png'
 import { Link } from "react-router-dom"
 
 import React, { useRef } from 'react';
+import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
@@ -15,15 +16,16 @@ function Contact() {
 
     const form = useRef();
 
-    const sendEmail = (e) => {
+    const redirectToGmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_jj6qhon', 'template_vbnily7', form.current, 'pkw34rws6ciAmmwAK')
-            .then((result) => {
-            }, (error) => {
-                console.log(error.text);
-            });
-        e.target.reset();
+    
+        const email = 'dakaralive.v@gmail.com'; // Ganti dengan alamat email tujuan
+        const subject = 'Pesan dari ' + e.target.user_name.value; // Menggunakan nilai dari input Nama sebagai subjek
+        const body = e.target.message.value; // Menggunakan nilai dari textarea Komentar sebagai isi pesan
+    
+        const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+        window.open(url);
     };
 
     return (
@@ -55,7 +57,7 @@ function Contact() {
                     <div className="kontak w-80 max-[460px]:w-full h-auto text-white max-md:mb-5 pr-5">
                         <h3 className=' font-semibold text-2xl max-md:text-lg mb-5'>KONTAK KAMI</h3>
                         <form className=' inline-block w-full'
-                            ref={form} onSubmit={sendEmail}>
+                            target="_blank" onSubmit={redirectToGmail}>
                             <input className='w-full max-sm:w-full bg-transparent border-white border-b-2 mb-5 outline-0 pl-1 pb-1 text-md font-thin '
                                 type="text"
                                 placeholder='Nama'
