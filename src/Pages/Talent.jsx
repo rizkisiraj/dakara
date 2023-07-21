@@ -69,7 +69,7 @@ const Talent = () => {
                 <>
                   <Link to={`/talent/${talent.Nama}`} className="block text-inherit text-center mx-auto no-underline hover:text-[#EFC3F6]" >Tentang {talent.Nama}</Link>
                   <button aria-label="social media detail handler" className="block text-inherit text-center mx-auto my-4 hover:text-[#EFC3F6]" onClick={() => setIsSocialMediaMode(true)}>Social Media</button>
-                  <p className="hover:text-[#EFC3F6] cursor-pointer mb-0">Merchandise</p>
+                  <Link to='/merch' className="text-inherit text-center mx-auto no-underline hover:text-[#EFC3F6] mb-0">Merchandise</Link>
                 </>
                 :
                 <>
