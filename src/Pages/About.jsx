@@ -5,10 +5,10 @@ import AutoScroll from '../Components/AutoScroll'
 import Logo from '../assets/logo.png'
 
 // foto staff
-import Staff1 from '../assets/staff1.webp'
-import Staff2 from '../assets/staff2.webp'
-import Staff3 from '../assets/staff3.webp'
-import Staff4 from '../assets/staff4.webp'
+import Staff1 from '../assets/Staff/staff1.webp'
+import Staff2 from '../assets/Staff/staff2.webp'
+import Staff3 from '../assets/Staff/staff3.webp'
+import Staff4 from '../assets/Staff/staff4.webp'
 
 import { IoLogoTwitter } from "react-icons/io"
 import { SiDiscord } from "react-icons/si"

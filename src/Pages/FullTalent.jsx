@@ -44,12 +44,12 @@ export default function FullTalent() {
 
             <div className=" flex flex-col w-full">
               <div className=" w-[18rem] max-md:w-[15rem] max-[400px]:w-[12rem] mx-auto mt-40">
-                <img className="w-full" src={require(`../assets/${talent["Profile Full Body"]}`)} alt="karakter" />
+                <img className="w-full" src={require(`../assets/Talent/${talent["Profile Full Body"]}`)} alt="karakter" />
               </div>
 
               <div className=" w-[55vh] aspect-[3/1] max-lg:w-[50vh] max-md:w-[40vh] max-[400px]:w-[35vh] mx-auto  bg-white rounded-xl mt-10 relative shadow-talentLogo">
                 <div className="absolute inset-0 flex items-center justify-center px-4">
-                  <img className=" w-full " src={require(`../assets/${talent.Logo}`)} alt="logo" />
+                  <img className=" w-full " src={require(`../assets/Talent/${talent.Logo}`)} alt="logo" />
                 </div>
               </div>
             </div>
@@ -57,13 +57,13 @@ export default function FullTalent() {
             <div className=" flex flex-col flex-wrap w-full  px-40 max-lg:px-16 max-md:px-10">
               <section className="w-full flex justify-around max-md:justify-between px-10 max-md:px-0 my-52 max-md:my-20 space-x-2">
                 <div className="w-[25vh] max-lg:w-[23vh] max-sm:w-[18vh] aspect-[5/6] rounded-md">
-                  <img src={require(`../assets/${talent["Mini Profil Talent1"]}`)} alt="" className="w-full object-cover" />
+                  <img src={require(`../assets/Talent/${talent["Mini Profil Talent1"]}`)} alt="" className="w-full object-cover" />
                 </div>
                 <div className="w-[25vh] max-lg:w-[23vh] max-sm:w-[18vh] aspect-[5/6] rounded-md">
-                  <img src={require(`../assets/${talent["Mini Profil Talent2"]}`)} alt="" className="w-full object-cover" />
+                  <img src={require(`../assets/Talent/${talent["Mini Profil Talent2"]}`)} alt="" className="w-full object-cover" />
                 </div>
                 <div className="w-[25vh] max-lg:w-[23vh] max-sm:w-[18vh] aspect-[5/6] rounded-md">
-                  <img src={require(`../assets/${talent["Mini Profil Talent3"]}`)} alt="" className="w-full object-cover" />
+                  <img src={require(`../assets/Talent/${talent["Mini Profil Talent3"]}`)} alt="" className="w-full object-cover" />
                 </div>
               </section>
 

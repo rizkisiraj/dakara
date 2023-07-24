@@ -53,7 +53,7 @@ const Talent = () => {
     <>
       <div className=' font-sans w-full pt-20 min-h-screen relative bg-[url("./assets/bg-talent.webp")] bg-cover bg-no-repeat bg-center flex justify-center items-end overflow-x-hidden'>
         <div className="relative w-full text-center flex justify-center overflow-y-hidden">
-          <motion.img onClick={onClickHandler} key={talent.Nama} initial={{ y: 500 }} animate={isShowing ? (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{ y: { duration: .5 } }} src={require(`../assets/${talent["Profile Setengah Badan"]}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
+          <motion.img onClick={onClickHandler} key={talent.Nama} initial={{ y: 500 }} animate={isShowing ? (isSmallScreen ? 'animateSmallScreen' : 'animate') : 'initial'} variants={ImageVariant} transition={{ y: { duration: .5 } }} src={require(`../assets/Talent/${talent["Profile Setengah Badan"]}`)} className="cursor-pointer w-full max-w-md block" alt="gambar talent" />
         </div>
         <motion.div initial={{ visibility: 'none' }} animate={isShowing ? 'visible' : 'notVisible'} transition={{ visibility: { duration: 1 } }} variants={infoVariant} className="text-white absolute bottom-10 md:bottom-auto md:top-40 md:right-20 lg:right-32 xl:right-64 w-[80%] md:w-full max-w-[493px] bg-gradient-to-b from-[#3B3BA5]/70 to-[#9625A8]/70 h-fit text-center py-7 px-10 md:px-20 md:py-14 rounded-xl shadow-talentCard">
           <div className="absolute flex w-6 h-6 bg-transparent top-2 right-2" onClick={() => { setIsShowing(!isShowing); setIsSocialMediaMode(false) }}>

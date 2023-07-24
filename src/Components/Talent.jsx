@@ -39,7 +39,7 @@ function Talent() {
                                         setTalent(talent[index]);
                                     setOpen(!open)
                                 }}
-                                src={require(`../assets/${item.GambarIntro}`)}
+                                src={require(`../assets/Talent/${item.GambarIntro}`)}
                                 alt="talent"
                                 className={`w-full object-cover object-top brightness-95`}
                             />
@@ -66,7 +66,7 @@ function Talent() {
                     </button>
 
                     <div className=" w-1/3 h-full max-md:h-2/3 max-md:w-full flex items-center justify-center">
-                        <img src={require(`../assets/${talent.Profile}`)} alt={talent.Nama} className='mx-auto w-72 max-md:w-28 items-center' />
+                        <img src={require(`../assets/Talent/${talent.Profile}`)} alt={talent.Nama} className='mx-auto w-72 max-md:w-28 items-center' />
                     </div>
 
                     <div className="flex flex-col relative w-2/3 max-md:w-full h-full px-4 max-md:my-2 lg:text-lg max-lg:text-md justify-between text-white font-medium">

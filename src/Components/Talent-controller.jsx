@@ -10,7 +10,7 @@ const TalentController = ({ setIsShowing, setTalent, talent }) => {
               setIsShowing(false);
               setTalent(tal);
               }} className='block mb-2 md:mr-4'>
-              <img src={require(`../assets/${tal.Profile}`)} alt="Vio" className={`rounded-full object-cover ${talent.Nama === tal.Nama ? 'border-2 border-blue-200 w-[76px] md:w-[110px]' : null} block w-[68px] md:w-[102px]`} />
+              <img src={require(`../assets/Talent/${tal.Profile}`)} alt="talent" className={`rounded-full object-cover ${talent.Nama === tal.Nama ? 'border-2 border-blue-200 w-[76px] md:w-[110px]' : null} block w-[68px] md:w-[102px]`} />
             </button>
           )
         })
